@@ -4,12 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import { profile } from "@/content/profile";
+import { assetPath } from "@/lib/paths";
 
 const links = [ ["Work", "/work"], ["Experience", "/experience"], ["About", "/about"], ["Education", "/education"], ["Contact", "/contact"] ];
 
 export function CvAction() {
   return profile.cv
-    ? <a className="button button-outline cv-action" href={profile.cv} download>Download CV <span aria-hidden="true">↓</span></a>
+    ? <a className="button button-outline cv-action" href={assetPath(profile.cv)} download>Download CV <span aria-hidden="true">↓</span></a>
     : <span className="button button-outline cv-action" role="link" aria-disabled="true" title="The downloadable CV is not available yet">CV unavailable</span>;
 }
 
@@ -29,6 +30,6 @@ export function Navigation() {
         <nav aria-label="Mobile navigation">{items}<CvAction /></nav>
       </div>
     </dialog>
-    <noscript><nav className="fallback-nav" aria-label="Main navigation without JavaScript">{links.map(([label, href]) => <a key={href} href={href}>{label}</a>)}<CvAction /></nav><style>{`.menu-toggle{display:none}.site-header .container{flex-wrap:wrap}`}</style></noscript>
+    <noscript><nav className="fallback-nav" aria-label="Main navigation without JavaScript">{links.map(([label, href]) => <a key={href} href={assetPath(href)}>{label}</a>)}<CvAction /></nav><style>{`.menu-toggle{display:none}.site-header .container{flex-wrap:wrap}`}</style></noscript>
   </>;
 }
