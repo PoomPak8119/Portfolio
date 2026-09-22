@@ -1,0 +1,112 @@
+import type { PortfolioImage } from "./profile";
+
+export type Project = {
+  slug: string;
+  title: string;
+  organisation: string;
+  period?: string;
+  role: string;
+  summary: string;
+  challenge: string;
+  outcome: string;
+  tags: string[];
+  featured: boolean;
+  image: PortfolioImage;
+  sections: { title: string; text: string }[];
+  evidence?: { label: string; href: string };
+};
+
+export const projects: Project[] = [
+  {
+    slug: "kmutt-edtech",
+    title: "TARA: from discovery to a classroom pilot",
+    organisation: "King Mongkut’s University of Technology Thonburi",
+    role: "Product team lead · Four-person team",
+    summary: "An education technology platform developed through a 12-month journey from discovery to a student pilot.",
+    challenge: "Explore how an education technology product could support student engagement.",
+    outcome: "50% increase in engagement across a 20-student pilot.",
+    tags: ["Education technology", "Product development", "User research"],
+    featured: true,
+    image: { src: null, filename: "kmutt-tara-edtech.jpg", alt: "TARA education platform interface used in the student pilot", placeholderLabel: "Project image to be added", aspectRatio: "4/3" },
+    sections: [
+      { title: "My role", text: "I led a four-person team over 12 months, taking the education product from discovery to pilot." },
+      { title: "Approach", text: "The work connected discovery, product development, and a live student pilot. The pilot provided a defined setting in which to assess engagement." },
+      { title: "Outcome", text: "Student engagement increased by 50% across a 20-student pilot. This result describes the pilot group; it is not a claim about broader deployment." },
+    ],
+    evidence: { label: "View TARA’s university project record", href: "https://seniorproject.sit.kmutt.ac.th/showproject/CS64-RE16" },
+  },
+  {
+    slug: "un-vietnam-humanitarian-automation",
+    title: "Making humanitarian data processing more efficient",
+    organisation: "United Nations Viet Nam",
+    period: "June–December 2025",
+    role: "Junior Officer for Digital Transformation",
+    summary: "AI-assisted automation supporting humanitarian information processing in a United Nations context.",
+    challenge: "Reduce repetitive humanitarian data-processing work.",
+    outcome: "~60% estimated reduction in humanitarian data-processing time.",
+    tags: ["AI automation", "Humanitarian data", "Public sector"],
+    featured: true,
+    image: { src: null, filename: "un-vietnam-humanitarian-automation.jpg", alt: "Approved overview of the humanitarian data-processing workflow at United Nations Viet Nam", placeholderLabel: "Project image to be added", aspectRatio: "4/3" },
+    sections: [
+      { title: "My role", text: "I worked on humanitarian data-processing automation as a Junior Officer for Digital Transformation with United Nations Viet Nam." },
+      { title: "Approach", text: "The initiative applied AI-assisted automation to repetitive information-processing work. This public summary is limited to the purpose and reported outcome; internal systems and operational data are not shown." },
+      { title: "Outcome", text: "The initiative produced an estimated reduction of approximately 60% in humanitarian data-processing time. The figure is an estimate, rather than an independently verified measurement." },
+    ],
+  },
+  {
+    slug: "kbtg-virtual-patient",
+    title: "A virtual patient for practical clinical learning",
+    organisation: "Kasikorn Business-Technology Group (KBTG)",
+    period: "January–June 2025",
+    role: "Business Analyst and AI Engineering Intern",
+    summary: "A co-developed AI virtual-patient simulator using retrieval-augmented generation (RAG).",
+    challenge: "Explore an alternative to imported, multi-million-THB simulation hardware.",
+    outcome: "Co-developed a RAG-based virtual-patient simulator with healthcare stakeholder validation.",
+    tags: ["Applied AI", "Business analysis", "Healthcare education"],
+    featured: true,
+    image: { src: null, filename: "kbtg-virtual-patient.jpg", alt: "Approved demonstration of the KBTG AI virtual-patient simulator", placeholderLabel: "Project image to be added", aspectRatio: "4/3" },
+    sections: [
+      { title: "My role", text: "I contributed business analysis and AI engineering as an intern, co-developing the simulator rather than building it independently." },
+      { title: "Approach", text: "The work brought together requirements gathering, AI engineering, and healthcare stakeholder validation." },
+      { title: "Solution", text: "The virtual-patient simulator used retrieval-augmented generation (RAG), an approach that brings retrieved reference information into the response-generation process." },
+      { title: "Outcome", text: "The team co-developed a simulator as an alternative to imported, multi-million-THB hardware. No cost-saving or clinical-effectiveness figure is claimed here." },
+    ],
+  },
+  {
+    slug: "un-thailand-ai-intelligence",
+    title: "AI-powered political intelligence digest",
+    organisation: "United Nations Thailand",
+    period: "February–June 2026",
+    role: "Junior Digital Transformation Consultant",
+    summary: "An AI-powered digest supporting weekly UN Country Team briefing preparation.",
+    challenge: "Reduce manual preparation for recurring political intelligence briefings.",
+    outcome: "6 hours per week saved in manual briefing preparation.",
+    tags: ["AI adoption", "Workflow automation"],
+    featured: false,
+    image: { src: null, filename: "un-thailand-ai-intelligence.jpg", alt: "Publication-safe overview of the AI-powered political intelligence digest workflow", placeholderLabel: "Project image to be added", aspectRatio: "4/3" },
+    sections: [
+      { title: "My role", text: "I worked on the AI-powered political intelligence digest as a Junior Digital Transformation Consultant with United Nations Thailand." },
+      { title: "Outcome", text: "The digest reduced weekly UN Country Team briefing preparation by 6 hours. This summary excludes internal briefing content and confidential systems." },
+    ],
+  },
+  {
+    slug: "aot-digital-experience",
+    title: "Recommendations for a better digital experience",
+    organisation: "Airports of Thailand",
+    period: "June–August 2024",
+    role: "IT Business Analyst Intern",
+    summary: "Digital and website transformation recommendations in an airport organisation.",
+    challenge: "Identify opportunities to improve the organisation’s digital and website experience.",
+    outcome: "Contributed digital and website transformation recommendations.",
+    tags: ["Business analysis", "Digital transformation"],
+    featured: false,
+    image: { src: null, filename: "aot-digital-experience.jpg", alt: "Approved website experience recommendations from the Airports of Thailand internship", placeholderLabel: "Project image to be added", aspectRatio: "4/3" },
+    sections: [{ title: "My role", text: "I contributed to digital and website transformation recommendations as an IT Business Analyst Intern. An implementation result or measured impact is not claimed." }],
+  },
+];
+
+export const metrics = [
+  { value: "~60%", description: "Estimated reduction in humanitarian data-processing time", context: "United Nations Viet Nam", slug: "un-vietnam-humanitarian-automation" },
+  { value: "6 hours", description: "Saved each week in manual briefing preparation", context: "United Nations Thailand", slug: "un-thailand-ai-intelligence" },
+  { value: "50%", description: "Increase in engagement across a 20-student pilot", context: "TARA · KMUTT", slug: "kmutt-edtech" },
+];
