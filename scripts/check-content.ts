@@ -3,13 +3,14 @@ import { existsSync } from "node:fs";
 import { projects, metrics } from "../content/projects.ts";
 import { profile } from "../content/profile.ts";
 import { experience } from "../content/experience.ts";
+import { credentials, recommendations } from "../content/credentials.ts";
 
 assert.equal(
   new Set(projects.map((project) => project.slug)).size,
   projects.length,
   "Project slugs must be unique",
 );
-assert.equal(projects.filter((project) => project.featured).length, 3);
+assert.equal(projects.filter((project) => project.featured).length, 4);
 for (const project of projects) {
   assert.match(project.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
   assert.ok(
@@ -47,13 +48,35 @@ assert.match(
   projects.find((project) => project.slug === "kbtg-virtual-patient")!.outcome,
   /Co-developed/,
 );
+const strategicAlignment = projects.find(
+  (project) => project.slug === "un-vietnam-strategic-alignment",
+)!;
+assert.ok(strategicAlignment.workflow?.length === 7);
+assert.match(
+  strategicAlignment.workflow!.find((step) => step.title === "Augment")!.text,
+  /support tool/,
+);
+assert.match(
+  strategicAlignment.sections.find((section) => section.title === "Outcome")!
+    .text,
+  /UN Resident Coordinator/,
+);
+for (const credential of credentials)
+  assert.equal(new URL(credential.href).protocol, "https:");
+for (const recommendation of recommendations)
+  assert.ok(
+    existsSync(`public${recommendation.href}`),
+    `Missing recommendation: ${recommendation.href}`,
+  );
 assert.equal(experience[0].period, "February–June 2026");
 assert.equal(experience[3].period, "June–August 2024");
 if (profile.cv)
-  assert.ok(
-    existsSync(`public${profile.cv}`),
-    "CV must exist before enabling downloads",
-  );
+  if (profile.cv.startsWith("https://")) new URL(profile.cv);
+  else
+    assert.ok(
+      existsSync(`public${profile.cv}`),
+      "Local CV must exist before enabling downloads",
+    );
 if (profile.portrait.src)
   assert.ok(existsSync(`public${profile.portrait.src}`));
 console.log(

@@ -29,12 +29,12 @@ Open the URL printed by Next.js. Local development defaults to the root path. To
 
 ## Project structure
 
-- `app/`: home, work index, five generated project pages, experience, about, education, contact, 404, SEO routes.
+- `app/`: home, work index, six generated project pages, experience, about, education, credentials, contact, 404, SEO routes.
 - `components/`: repeated layout, project, experience, navigation, and image patterns.
 - `content/`: typed factual content, skills, metrics, image records, contact links.
 - `lib/`: metadata and subpath-aware public asset URLs.
 - `public/images/`: approved local image assets, when available.
-- `public/documents/`: the approved public CV, when available.
+- `public/documents/`: the approved public CV and reviewed credential documents, when available.
 - `scripts/`: small content and browser regression checks.
 - `DESIGN_SYSTEM.md`: authoritative approved design; `DESIGN.md` points to it.
 - `IMAGE_REQUESTS.md`: image specifications and privacy guidance.
@@ -43,11 +43,11 @@ Open the URL printed by Next.js. Local development defaults to the root path. To
 
 ## Edit content
 
-Edit `content/profile.ts`, `content/projects.ts`, `content/experience.ts`, and `content/education.ts`. Keep metric qualifiers and collaborative attribution. Update the project `sections` array only when the detail is supported. Omit unsupported sections rather than filling a template. The three featured projects follow `CONTENT_STRATEGY.md`; the Phase 4 brief expands navigation into separate pages. Legacy `/case-studies/...` URLs redirect to the corresponding `/work/...` pages.
+Edit `content/profile.ts`, `content/projects.ts`, `content/experience.ts`, `content/education.ts`, and `content/credentials.ts`. Keep metric qualifiers and collaborative attribution. Update project `sections` and `workflow` only when the detail is supported. Omit unsupported sections rather than filling a template. The four featured projects include the approved UN–Government strategic alignment study. Legacy `/case-studies/...` URLs redirect to the corresponding `/work/...` pages.
 
 Project slugs are public URLs: keep them stable, or add an explicit redirect in `next.config.ts`. Run `npm test`, lint, type checking, and a production build after changes.
 
-The public email and LinkedIn come from `PORTFOLIO_BRIEF.md`. Add GitHub to `profile.socialLinks` only after its public URL is supplied. To enable the CV, place the approved PDF at `public/documents/passapol-phukhang-cv.pdf` and set `profile.cv` to `/documents/passapol-phukhang-cv.pdf`. Existing controls then become real download links. Never point them at a missing PDF. If `/resume.pdf` was publicly used, add a redirect after the PDF is available.
+The public email and LinkedIn come from `PORTFOLIO_BRIEF.md`. Add GitHub to `profile.socialLinks` only after its public URL is supplied. The approved external CV is configured in `profile.cv`. A local replacement can be placed at `public/documents/passapol-phukhang-cv.pdf` and configured as `/documents/passapol-phukhang-cv.pdf`; never point the controls at a missing PDF. If `/resume.pdf` was publicly used, add a redirect after the PDF is available.
 
 ## Replace images
 
@@ -58,6 +58,12 @@ The public email and LinkedIn come from `PORTFOLIO_BRIEF.md`. Add GitHub to `pro
 5. Review at 320px and desktop. Next.js optimises real images with responsive sizes; below-fold images load lazily. Only the homepage portrait uses preload.
 
 Null images render on the server without image requests. Configured images have an error fallback. Filename and internal image notes never appear in the page. The text-only social preview and favicon use approved colours and do not fabricate project imagery.
+
+## Add credentials and recommendations
+
+The public educational certificate collection is configured in `content/credentials.ts`. Put approved certificate PDFs in `public/documents/certificates/` and recommendation letters in `public/documents/recommendations/`, then add their public paths to the matching data array. Do not add a record until its file exists.
+
+Before publishing a document, review it for private phone numbers, addresses, personal email addresses, employee IDs, internal references, signatures, confidential wording, and private organisational information. Do not alter an official document in the repository; obtain an approved public or redacted copy from the owner. Use descriptive filenames and link labels that identify the destination and file type.
 
 ## Deployment to Vercel
 
@@ -83,7 +89,7 @@ QA_URL=http://127.0.0.1:3000/co-founder/portfolio QA_BROWSER=firefox npm run tes
 QA_URL=http://127.0.0.1:3000/co-founder/portfolio QA_BROWSER=webkit npm run test:browser
 ```
 
-Set `QA_URL` to the local URL including the base path when testing subpath deployment. Screenshots and reports go to ignored `output/playwright/`. The suite covers all 11 pages at 320, 375, 768, 1024, and 1440 pixels; Chrome also runs axe at 375 and 1440. Keyboard tests check skip navigation, visible focus, modal containment, Escape, focus return, and navigation. Additional checks cover reduced motion, 200% text enlargement, no JavaScript, 404s, legacy redirects, and social preview output.
+Set `QA_URL` to the local URL including the base path when testing subpath deployment. Screenshots and reports go to ignored `output/playwright/`. The suite covers all 13 pages at 320, 375, 768, 1024, and 1440 pixels; Chrome also runs axe at 375 and 1440. Keyboard tests check skip navigation, visible focus, modal containment, Escape, focus return, and navigation. Additional checks cover reduced motion, 200% text enlargement, no JavaScript, 404s, legacy redirects, and social preview output.
 
 Accessibility is based on semantic HTML, one H1, logical headings, 44px minimum targets, a skip link, visible focus, high-contrast tokens, native dialog interaction, no hover-only content, and reduced-motion support. Automated checks supplement visual and keyboard review; they are not a claim of formal WCAG certification.
 
