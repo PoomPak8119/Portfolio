@@ -20,7 +20,7 @@ export default function Work() {
         <div className="container">
           <SectionHeading
             label="Featured studies"
-            title="Three perspectives on useful innovation."
+            title="Four perspectives on useful innovation."
           />
           <div className="project-list">
             {projects

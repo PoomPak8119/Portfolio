@@ -16,7 +16,7 @@ export function ProjectCard({
         <p className="eyebrow">
           {String(number).padStart(2, "0")} / {project.organisation}
         </p>
-        <h3>{project.title}</h3>
+        <h3>{project.shortTitle ?? project.title}</h3>
         <p>{project.challenge}</p>
         <p className="project-role">
           <strong>My role</strong>

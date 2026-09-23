@@ -3,6 +3,7 @@ import type { PortfolioImage } from "./profile";
 export type Project = {
   slug: string;
   title: string;
+  shortTitle?: string;
   organisation: string;
   period?: string;
   role: string;
@@ -12,11 +13,84 @@ export type Project = {
   tags: string[];
   featured: boolean;
   image: PortfolioImage;
+  workflow?: { title: string; text: string }[];
   sections: { title: string; text: string }[];
   evidence?: { label: string; href: string };
 };
 
 export const projects: Project[] = [
+  {
+    slug: "un-vietnam-strategic-alignment",
+    title: "UN–Government Digital Cooperation & Strategic Alignment",
+    shortTitle: "UN–Government Strategic Alignment",
+    organisation: "United Nations Viet Nam",
+    period: "June–December 2025",
+    role: "Junior Officer for Digital Transformation",
+    summary:
+      "Supported a high-priority, one-time UN–Government digital cooperation initiative by transforming fragmented information on UN Country Team activities into a centralised view of how initiatives aligned with Viet Nam’s national development priorities.",
+    challenge:
+      "Create a clearer way to understand and communicate how UN Country Team initiatives contributed to Viet Nam’s national priorities.",
+    outcome:
+      "Translated initiative-level information into leadership-ready insights for UN–Government consultation and senior UN stakeholders.",
+    tags: [
+      "Requirements gathering",
+      "Excel & data preparation",
+      "Tableau & data storytelling",
+      "AI-augmented workflow",
+    ],
+    featured: true,
+    image: {
+      src: null,
+      filename: "un-vietnam-strategic-alignment-dashboard.jpg",
+      alt: "Approved image for the UN–Government strategic alignment project",
+      placeholderLabel: "Project image to be added",
+      aspectRatio: "4/3",
+    },
+    workflow: [
+      {
+        title: "Discover",
+        text: "Gather requirements from UN colleagues and understand how the information would be used.",
+      },
+      {
+        title: "Structure",
+        text: "Define the required data and centralise initiative information using Excel.",
+      },
+      {
+        title: "Prepare",
+        text: "Clean, organise, and standardise the collected information.",
+      },
+      {
+        title: "Augment",
+        text: "Use AI as a support tool for analysis, problem-solving, learning, and dashboard development.",
+      },
+      {
+        title: "Visualise",
+        text: "Build a Tableau dashboard showing UN contributions and alignment with national priorities.",
+      },
+      {
+        title: "Tell the story",
+        text: "Translate the dashboard and underlying data into clear strategic narratives.",
+      },
+      {
+        title: "Communicate",
+        text: "Prepare the insights for UN–Government consultation and senior UN leadership.",
+      },
+    ],
+    sections: [
+      {
+        title: "My role",
+        text: "I worked with UN colleagues to gather requirements and translate the organisational need into a practical data workflow. I supported the project from data collection and cleaning through dashboard development, visualisation, storytelling, and leadership reporting.",
+      },
+      {
+        title: "AI as augmentation",
+        text: "I used AI to support parts of my workflow, including analysis, problem-solving, learning, structuring, and dashboard development. I remained responsible for gathering requirements, preparing the data, analysing alignment, building the Tableau dashboard, and communicating the results.",
+      },
+      {
+        title: "Outcome",
+        text: "The project created a more centralised and visual way to understand UN Country Team contributions and their alignment with Viet Nam’s national priorities. It supported strategic UN–Government consultation through structured data, visualisation, and data storytelling. I reported the resulting analysis to senior leadership, including the UN Resident Coordinator.",
+      },
+    ],
+  },
   {
     slug: "kmutt-edtech",
     title: "TARA: from discovery to a classroom pilot",

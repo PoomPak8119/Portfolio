@@ -21,8 +21,9 @@ export const experience: Experience[] = [
     role: "Junior Officer for Digital Transformation",
     location: "Viet Nam",
     period: "June–December 2025",
-    summary: "AI-assisted automation for humanitarian data processing.",
-    project: "un-vietnam-humanitarian-automation",
+    summary:
+      "Supported a high-priority UN–Government digital cooperation project aligning UN Country Team initiatives with Viet Nam’s national development priorities, translating stakeholder requirements into an Excel and Tableau workflow and delivering data visualisation and storytelling for consultation and senior UN leadership.",
+    project: "un-vietnam-strategic-alignment",
   },
   {
     organisation: "Kasikorn Business-Technology Group (KBTG)",
