@@ -154,7 +154,7 @@ export default function Home() {
               About my journey <span aria-hidden="true">↗</span>
             </Link>
             <div className="mt-8" id="credentials" tabIndex={-1}>
-              <p className="eyebrow">Currently</p>
+              <p className="eyebrow">Education &amp; credentials</p>
               <p className="font-medium text-navy">
                 Master’s Degree in Digital Innovation
                 <br />
@@ -162,6 +162,10 @@ export default function Home() {
               </p>
               <Link className="text-link mt-2" href="/education">
                 View education <span aria-hidden="true">↗</span>
+              </Link>
+              <Link className="text-link mt-2" href="/credentials">
+                View credentials &amp; recommendations{" "}
+                <span aria-hidden="true">↗</span>
               </Link>
             </div>
           </div>

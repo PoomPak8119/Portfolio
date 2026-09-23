@@ -44,6 +44,10 @@ export default function About() {
             <Link className="text-link mt-6" href="/education">
               View my education <span aria-hidden="true">↗</span>
             </Link>
+            <Link className="text-link mt-2" href="/credentials">
+              View credentials &amp; recommendations{" "}
+              <span aria-hidden="true">↗</span>
+            </Link>
             <div className="speaking">
               <p className="eyebrow">Sharing knowledge</p>
               <p>

@@ -95,6 +95,9 @@ export default function RootLayout({
                     Visit {link.label} <span aria-hidden="true">↗</span>
                   </a>
                 ))}
+                <Link href="/credentials">
+                  Credentials <span aria-hidden="true">↗</span>
+                </Link>
                 <CvAction />
               </nav>
             </div>

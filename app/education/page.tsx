@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { education } from "@/content/education";
 import { ContactCta, PageIntro } from "@/components/ui";
 import { pageMetadata } from "@/lib/metadata";
@@ -35,6 +36,21 @@ export default function Education() {
               </div>
             </article>
           ))}
+        </div>
+      </section>
+      <section className="section soft">
+        <div className="container cta-layout">
+          <div>
+            <p className="eyebrow">Supporting evidence</p>
+            <h2>Credentials &amp; Recommendations</h2>
+            <p className="lead mt-4">
+              Explore selected certificates and the pathway for professional
+              recommendation letters.
+            </p>
+          </div>
+          <Link className="button button-primary" href="/credentials">
+            View credentials <span aria-hidden="true">↗</span>
+          </Link>
         </div>
       </section>
       <ContactCta />

@@ -13,7 +13,9 @@ export const profile = {
   email: "passapolpoom@gmail.com",
   description:
     "I bridge business, people, and emerging technology to turn organisational challenges into practical digital and AI solutions.",
-  cv: null as string | null,
+  cv: "https://drive.google.com/file/d/1xp206xIiqt1ri4jYeMh-0trrPnlDNrVh/view?usp=sharing" as
+    | string
+    | null,
   socialLinks: [
     {
       label: "LinkedIn",

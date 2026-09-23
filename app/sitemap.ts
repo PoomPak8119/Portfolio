@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/experience",
     "/about",
     "/education",
+    "/credentials",
     "/contact",
     ...projects.map((project) => `/work/${project.slug}`),
   ].map((path) => ({ url: absoluteUrl(path)! }));

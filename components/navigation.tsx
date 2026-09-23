@@ -18,17 +18,18 @@ export function CvAction() {
   return profile.cv ? (
     <a
       className="button button-outline cv-action"
-      href={assetPath(profile.cv)}
-      download
+      href={profile.cv}
+      target="_blank"
+      rel="noreferrer"
     >
-      Download CV <span aria-hidden="true">↓</span>
+      View my CV <span aria-hidden="true">↗</span>
     </a>
   ) : (
     <span
       className="button button-outline cv-action"
       role="link"
       aria-disabled="true"
-      title="The downloadable CV is not available yet"
+      title="The CV is not available yet"
     >
       CV unavailable
     </span>
