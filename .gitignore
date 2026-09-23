@@ -8,5 +8,6 @@ output/
 !.env.production
 *.tsbuildinfo
 .DS_Store
+/private/
 .vercel/
 next-env.d.ts

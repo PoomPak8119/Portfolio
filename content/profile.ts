@@ -3,7 +3,7 @@ export type PortfolioImage = {
   filename: string;
   alt: string;
   placeholderLabel: string;
-  aspectRatio: "4/3" | "16/9" | "3/4";
+  aspectRatio: "4/3" | "16/9" | "3/4" | "227/30";
 };
 
 export const profile = {

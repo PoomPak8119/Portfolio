@@ -40,11 +40,11 @@ export const projects: Project[] = [
     ],
     featured: true,
     image: {
-      src: null,
-      filename: "un-vietnam-strategic-alignment-dashboard.jpg",
-      alt: "Approved image for the UN–Government strategic alignment project",
+      src: "/images/projects/un-vietnam-strategic-alignment-dashboard.png",
+      filename: "un-vietnam-strategic-alignment-dashboard.png",
+      alt: "Tableau visualisation showing activity types across six strategic pillars",
       placeholderLabel: "Project image to be added",
-      aspectRatio: "4/3",
+      aspectRatio: "16/9",
     },
     workflow: [
       {
@@ -104,11 +104,11 @@ export const projects: Project[] = [
     tags: ["Education technology", "Product development", "User research"],
     featured: true,
     image: {
-      src: null,
-      filename: "kmutt-tara-edtech.jpg",
-      alt: "TARA education platform interface used in the student pilot",
+      src: "/images/projects/kmutt-tara-edtech.png",
+      filename: "kmutt-tara-edtech.png",
+      alt: "TARA student portal with learning content and an AI chatbot",
       placeholderLabel: "Project image to be added",
-      aspectRatio: "4/3",
+      aspectRatio: "16/9",
     },
     sections: [
       {
@@ -142,11 +142,11 @@ export const projects: Project[] = [
     tags: ["AI automation", "Humanitarian data", "Public sector"],
     featured: true,
     image: {
-      src: null,
-      filename: "un-vietnam-humanitarian-automation.jpg",
-      alt: "Approved overview of the humanitarian data-processing workflow at United Nations Viet Nam",
+      src: "/images/projects/un-vietnam-humanitarian-automation.png",
+      filename: "un-vietnam-humanitarian-automation.png",
+      alt: "Humanitarian document workflow from content extraction and AI translation to review and email delivery",
       placeholderLabel: "Project image to be added",
-      aspectRatio: "4/3",
+      aspectRatio: "16/9",
     },
     sections: [
       {
@@ -178,11 +178,11 @@ export const projects: Project[] = [
     tags: ["Applied AI", "Business analysis", "Healthcare education"],
     featured: true,
     image: {
-      src: null,
+      src: "/images/projects/kbtg-virtual-patient.jpg",
       filename: "kbtg-virtual-patient.jpg",
-      alt: "Approved demonstration of the KBTG AI virtual-patient simulator",
+      alt: "Virtual Patient Plus presentation showing the medical education collaboration between Chulalongkorn University and KBTG",
       placeholderLabel: "Project image to be added",
-      aspectRatio: "4/3",
+      aspectRatio: "16/9",
     },
     sections: [
       {
@@ -217,11 +217,11 @@ export const projects: Project[] = [
     tags: ["AI adoption", "Workflow automation"],
     featured: false,
     image: {
-      src: null,
-      filename: "un-thailand-ai-intelligence.jpg",
-      alt: "Publication-safe overview of the AI-powered political intelligence digest workflow",
+      src: "/images/projects/un-thailand-workflow.png",
+      filename: "un-thailand-workflow.png",
+      alt: "Automation workflow used to prepare and email the United Nations Thailand political intelligence digest",
       placeholderLabel: "Project image to be added",
-      aspectRatio: "4/3",
+      aspectRatio: "227/30",
     },
     sections: [
       {
