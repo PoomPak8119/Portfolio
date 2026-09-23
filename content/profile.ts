@@ -11,9 +11,15 @@ export const profile = {
   positioning: "Digital Innovation & AI Transformation",
   location: "Dublin, Ireland",
   email: "passapolpoom@gmail.com",
-  description: "I bridge business, people, and emerging technology to turn organisational challenges into practical digital and AI solutions.",
+  description:
+    "I bridge business, people, and emerging technology to turn organisational challenges into practical digital and AI solutions.",
   cv: null as string | null,
-  socialLinks: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/passapol-phukhang" }],
+  socialLinks: [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/passapol-phukhang",
+    },
+  ],
   portrait: {
     src: null,
     filename: "passapol-phukhang-portrait.jpg",
@@ -24,16 +30,59 @@ export const profile = {
 };
 
 export const skills: { title: string; items: string[] }[] = [
-  { title: "Digital & business", items: ["Business analysis", "Requirements gathering", "User research", "Design thinking", "Agile methodology", "Feasibility studies", "Stakeholder engagement"] },
-  { title: "AI & automation", items: ["Applied artificial intelligence", "Prompt engineering", "Retrieval-augmented generation (RAG)", "Large language models", "n8n", "AI workflow automation"] },
-  { title: "Technical foundation", items: ["Python", "SQL", "React.js", "Next.js", "HTML", "CSS"] },
+  {
+    title: "Digital & business",
+    items: [
+      "Business analysis",
+      "Requirements gathering",
+      "User research",
+      "Design thinking",
+      "Agile methodology",
+      "Feasibility studies",
+      "Stakeholder engagement",
+    ],
+  },
+  {
+    title: "AI & automation",
+    items: [
+      "Applied artificial intelligence",
+      "Prompt engineering",
+      "Retrieval-augmented generation (RAG)",
+      "Large language models",
+      "n8n",
+      "AI workflow automation",
+    ],
+  },
+  {
+    title: "Technical foundation",
+    items: ["Python", "SQL", "React.js", "Next.js", "HTML", "CSS"],
+  },
   { title: "Tools", items: ["Microsoft Office", "Git", "GitHub"] },
 ];
 
 export const approach = [
-  { title: "Discover", description: "Understand people, workflows, stakeholders, and organisational needs." },
-  { title: "Define", description: "Translate ambiguity into clear requirements and practical opportunities." },
-  { title: "Design", description: "Explore human-centred approaches grounded in the problem." },
-  { title: "Build", description: "Prototype and implement with AI, automation, and digital tools." },
-  { title: "Adopt", description: "Support people in integrating technology into everyday workflows." },
+  {
+    title: "Discover",
+    description:
+      "Understand people, workflows, stakeholders, and organisational needs.",
+  },
+  {
+    title: "Define",
+    description:
+      "Translate ambiguity into clear requirements and practical opportunities.",
+  },
+  {
+    title: "Design",
+    description: "Explore human-centred approaches grounded in the problem.",
+  },
+  {
+    title: "Build",
+    description:
+      "Prototype and implement with AI, automation, and digital tools.",
+  },
+  {
+    title: "Adopt",
+    description:
+      "Support people in integrating technology into everyday workflows.",
+  },
 ];

@@ -5,6 +5,7 @@ output/
 .playwright-cli/
 .env*
 !.env.example
+!.env.production
 *.tsbuildinfo
 .DS_Store
 .vercel/
