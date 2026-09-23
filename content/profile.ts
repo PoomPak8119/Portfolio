@@ -21,7 +21,7 @@ export const profile = {
     },
   ],
   portrait: {
-    src: null,
+    src: "/images/profile/passapol-phukhang-portrait.jpg",
     filename: "passapol-phukhang-portrait.jpg",
     alt: "Portrait of Passapol Phukhang",
     placeholderLabel: "Portrait to be added",
