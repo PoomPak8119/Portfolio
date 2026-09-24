@@ -15,7 +15,7 @@
 
 1. Final public CV PDF with the corrected dates and approved contact details.
 2. Access to the root site's routing configuration for deployment at the confirmed `https://ludaxia.app/co-founder/portfolio`. The user will supply the GitHub repository later.
-3. Approved images listed in `IMAGE_REQUESTS.md`; the portrait has been supplied and connected.
+3. Review publication permissions again if any project image is replaced; all currently requested images are connected.
 4. Optional public GitHub profile, if it should be a contact link; a repository URL does not automatically substitute for a professional profile.
 5. To deepen case studies: TARA project dates and pilot measurement definition/baseline; UN estimate methodology and permitted workflow details; KBTG specific individual contributions and approved validation evidence; AOT approved recommendation detail. The existing summaries remain deliberately limited to supplied facts.
 6. Optional public speaking-event link/title/date and approved recommendation or media links. These are omitted unless supplied; the documented 300+ webinar participant count is retained on About.

@@ -39,6 +39,6 @@ Inspected desktop and mobile captures for the homepage, credentials page, and UN
 - Provide the public Git repository URL. No repository remote was supplied and no push was made. The supplied public Google Drive CV is connected.
 - Configure the existing `ludaxia.app` host or reverse proxy to serve this app at `/co-founder/portfolio`, including the Next.js assets. DNS alone cannot provide a path prefix. The host's root `robots.txt` must allow the chosen path.
 - Re-run Lighthouse, social-card, canonical, and route checks against the deployed URL, then check real field performance when traffic is available.
-- Supply or approve the project images listed in `IMAGE_REQUESTS.md`. The portrait has been supplied and connected.
+- Review publication permissions and alt text if any connected project image is replaced.
 - Supply a publication-ready UN Viet Nam recommendation letter and approved metadata after privacy review; unavailable recommendations do not render broken links.
 - The documented LinkedIn URL was preserved, but LinkedIn returned HTTP 999 to this automated link check. This appears to block the request; it does not establish that the profile URL is broken.

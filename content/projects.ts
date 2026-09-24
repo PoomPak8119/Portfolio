@@ -226,9 +226,9 @@ export const projects: Project[] = [
     },
     gallery: [
       {
-        src: null,
+        src: "/images/projects/un-thailand-digest-output-public.png",
         filename: "un-thailand-digest-output-public.png",
-        alt: "Approved example of the United Nations Thailand political intelligence digest",
+        alt: "Example page from the United Nations Thailand weekly news briefing with an executive overview and highlighted article",
         placeholderLabel: "Briefing output image coming soon",
         aspectRatio: "3/4",
       },
