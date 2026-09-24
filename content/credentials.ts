@@ -69,7 +69,7 @@ export const credentials: Credential[] = [
   {
     title: "All educational certificates",
     type: "External certificate collection",
-    issuer: "Ludaxia",
+    issuer: "",
     href: "https://ludaxia.app/poom/certificates",
     description:
       "A public collection of selected educational and professional-development certificates.",

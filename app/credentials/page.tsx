@@ -39,9 +39,11 @@ export default function Credentials() {
                 )}
                 <p className="eyebrow">{credential.type}</p>
                 <h3>{credential.title}</h3>
-                <p className="font-medium text-navy mt-4">
-                  {credential.issuer}
-                </p>
+                {credential.issuer && (
+                  <p className="font-medium text-navy mt-4">
+                    {credential.issuer}
+                  </p>
+                )}
                 {credential.date && (
                   <p className="mt-2 text-sm">{credential.date}</p>
                 )}
