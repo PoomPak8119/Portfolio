@@ -68,7 +68,12 @@ assert.match(
   /UN Resident Coordinator/,
 );
 for (const credential of credentials)
-  assert.equal(new URL(credential.href).protocol, "https:");
+  if (credential.href.startsWith("https://")) new URL(credential.href);
+  else
+    assert.ok(
+      existsSync(`public${credential.href}`),
+      `Missing credential: ${credential.href}`,
+    );
 for (const recommendation of recommendations)
   assert.ok(
     existsSync(`public${recommendation.href}`),

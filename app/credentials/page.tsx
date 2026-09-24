@@ -29,9 +29,27 @@ export default function Credentials() {
               <article className="case-summary" key={credential.title}>
                 <p className="eyebrow">{credential.type}</p>
                 <h3>{credential.title}</h3>
+                <p className="font-medium text-navy mt-4">
+                  {credential.issuer}
+                </p>
+                {credential.date && (
+                  <p className="mt-2 text-sm">{credential.date}</p>
+                )}
                 <p className="mt-4">{credential.description}</p>
-                <a className="text-link mt-4" href={credential.href}>
-                  View all educational certificates (external site)
+                <a
+                  className="text-link mt-4"
+                  href={
+                    credential.href.startsWith("https://")
+                      ? credential.href
+                      : assetPath(credential.href)
+                  }
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View {credential.title}{" "}
+                  {credential.href.endsWith(".pdf")
+                    ? "(PDF)"
+                    : "(external site)"}
                   <span aria-hidden="true">↗</span>
                 </a>
               </article>
@@ -60,6 +78,8 @@ export default function Credentials() {
                   <a
                     className="text-link mt-4"
                     href={assetPath(recommendation.href)}
+                    target="_blank"
+                    rel="noreferrer"
                   >
                     View {recommendation.title} (PDF)
                     <span aria-hidden="true">↗</span>

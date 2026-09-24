@@ -761,6 +761,12 @@ nav a[aria-current="page"] {
     grid-template-columns: repeat(2, 1fr);
     gap: 48px;
   }
+  .credentials-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .credentials-list .case-summary {
+    max-width: none;
+  }
   .education-entry {
     grid-template-columns: 1fr 2fr;
     gap: 48px;

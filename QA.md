@@ -32,7 +32,7 @@ These local, single-run Lighthouse results are lab evidence. They do not represe
 
 ## Final visual review
 
-Inspected desktop and mobile captures for the homepage, credentials page, and UN–Government strategic alignment case study after the enhancement. The long project title, seven-step workflow, four featured cards, empty recommendation state, document links, footer, and supplied portrait remain coherent. Placeholder frames keep their intended aspect ratio; project-image absence does not block the build.
+Inspected desktop and mobile captures for the homepage, credentials page, and UN–Government strategic alignment case study after the enhancement. The long project title, seven-step workflow, four featured cards, certificate and recommendation grids, document links, footer, and supplied portrait remain coherent. Connected project images keep their intended aspect ratios.
 
 ## Pending release checks
 
@@ -40,5 +40,5 @@ Inspected desktop and mobile captures for the homepage, credentials page, and UN
 - Configure the existing `ludaxia.app` host or reverse proxy to serve this app at `/co-founder/portfolio`, including the Next.js assets. DNS alone cannot provide a path prefix. The host's root `robots.txt` must allow the chosen path.
 - Re-run Lighthouse, social-card, canonical, and route checks against the deployed URL, then check real field performance when traffic is available.
 - Review publication permissions and alt text if any connected project image is replaced.
-- Supply a publication-ready UN Viet Nam recommendation letter and approved metadata after privacy review; unavailable recommendations do not render broken links.
+- Reconfirm that signatures, professional email addresses, and official office contact details in the published recommendation PDFs remain approved for public display before deployment.
 - The documented LinkedIn URL was preserved, but LinkedIn returned HTTP 999 to this automated link check. This appears to block the request; it does not establish that the profile URL is broken.
