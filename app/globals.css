@@ -724,9 +724,13 @@ nav a[aria-current="page"] {
   background: var(--white);
 }
 .recognition-card > .image-frame {
-  border: 0;
-  border-bottom: 1px solid var(--border-light);
+  border: 6px solid var(--blue-700);
   border-radius: 0;
+  background: var(--blue-700);
+}
+.recognition-card > .image-frame img {
+  object-fit: cover;
+  object-position: top;
 }
 .recognition-card-copy {
   display: flex;
