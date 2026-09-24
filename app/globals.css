@@ -353,7 +353,7 @@ nav a[aria-current="page"] {
 }
 .hero-portrait .image-frame {
   background: transparent;
-  border-color: rgb(255 255 255 / 30%);
+  border: 0;
   color: var(--cream-200);
 }
 .hero-caption {
@@ -366,7 +366,7 @@ nav a[aria-current="page"] {
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-md);
-  border: 1px solid var(--border-light);
+  border: 6px solid var(--blue-700);
   background: var(--surface-100);
   color: var(--slate-700);
 }
@@ -666,6 +666,7 @@ nav a[aria-current="page"] {
 }
 .about-grid > .image-frame {
   max-width: 360px;
+  border: 0;
 }
 .contact-grid {
   display: grid;
