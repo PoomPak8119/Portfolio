@@ -23,9 +23,10 @@ Open the URL printed by Next.js. Local development defaults to the root path. To
 | `npm run lint` | Next.js and TypeScript ESLint rules |
 | `npm run typecheck` | Generate route types and run strict TypeScript checking |
 | `npm test` | Content references, dates, qualifiers, and asset integrity |
-| `npm run build` | Production build and static page generation |
-| `npm run start` | Serve the production build |
+| `npm run build` | Generate the deployable static site in `out/` |
 | `npm run test:browser` | Browser, responsive, keyboard, and axe checks against a running production server |
+
+After building, use `npx serve out` when a local static-file preview is needed.
 
 ## Project structure
 
@@ -45,7 +46,7 @@ Open the URL printed by Next.js. Local development defaults to the root path. To
 
 Edit `content/profile.ts`, `content/projects.ts`, `content/experience.ts`, `content/education.ts`, and `content/credentials.ts`. Keep metric qualifiers and collaborative attribution. Update project `sections` and `workflow` only when the detail is supported. Omit unsupported sections rather than filling a template. The four featured projects include the approved UN–Government strategic alignment study. Legacy `/case-studies/...` URLs redirect to the corresponding `/work/...` pages.
 
-Project slugs are public URLs: keep them stable, or add an explicit redirect in `next.config.ts`. Run `npm test`, lint, type checking, and a production build after changes.
+Project slugs are public URLs: keep them stable, or add an explicit redirect in `public/_redirects`. Run `npm test`, lint, type checking, and a production build after changes.
 
 The public email and LinkedIn come from `PORTFOLIO_BRIEF.md`. Add GitHub to `profile.socialLinks` only after its public URL is supplied. The approved external CV is configured in `profile.cv`. A local replacement can be placed at `public/documents/passapol-phukhang-cv.pdf` and configured as `/documents/passapol-phukhang-cv.pdf`; never point the controls at a missing PDF. If `/resume.pdf` was publicly used, add a redirect after the PDF is available.
 
@@ -55,7 +56,7 @@ The public email and LinkedIn come from `PORTFOLIO_BRIEF.md`. Add GitHub to `pro
 2. Put the file in `public/images/profile/` or `public/images/projects/`. Prefer an appropriately compressed WebP/JPEG; generally aim below 300 KB per photograph where quality permits.
 3. Set its content record's `src` to `/images/.../filename.jpg`. Paths exclude `public` and exclude the deployment subpath.
 4. Confirm `alt` against the actual image. Suggested alt text is provisional, not a claim about an unseen asset. Keep `aspectRatio` stable; the image uses `object-fit: contain` to preserve faces and interface details.
-5. Review at 320px and desktop. Next.js optimises real images with responsive sizes; below-fold images load lazily. Only the homepage portrait uses preload.
+5. Review at 320px and desktop. Images retain stable dimensions and below-fold images load lazily. Only the homepage portrait uses preload.
 
 Null images render on the server without image requests. Configured images have an error fallback. Filename and internal image notes never appear in the page. The text-only social preview and favicon use approved colours and do not fabricate project imagery.
 
@@ -67,22 +68,22 @@ Certificate preview images live in `public/images/credentials/`. Export the comp
 
 Before publishing a document, review it for private phone numbers, addresses, personal email addresses, employee IDs, internal references, signatures, confidential wording, and private organisational information. Do not alter an official document in the repository; obtain an approved public or redacted copy from the owner. Use descriptive filenames and link labels that identify the destination and file type.
 
-## Deployment to Vercel
+## Deployment to Cloudflare Pages
 
-1. Push this repository and import it into Vercel using the Next.js preset.
-2. Use `npm ci`, build command `npm run build`, and the default Next.js output settings. No `vercel.json` is required.
-3. The committed `.env.production` configures the confirmed `https://ludaxia.app/co-founder/portfolio`. This is public configuration, not a secret. Override `SITE_URL` with the **full public HTTPS URL** if hosting changes and rebuild. Next.js `basePath`, asset URLs, canonicals, Open Graph images, robots, and sitemap derive from this one setting.
-4. Assign the domain or configure the existing site's reverse proxy/rewrite so requests for the portfolio prefix (including `_next`, image optimisation, icon, social preview, and sitemap) reach this deployment with the prefix intact. A path under an existing domain cannot be assigned using DNS alone.
+1. Connect this repository to Cloudflare Pages without enabling Workers, OpenNext, or vinext.
+2. Use `npm ci` as the install command, `npm run build` as the build command, and `out` as the build output directory. Use Node.js 22.13 or newer.
+3. The committed `.env.production` configures `https://ludaxia.app/co-founder/portfolio`. Override `SITE_URL` only if the public URL changes, then rebuild.
+4. `public/_redirects` preserves legacy project links and maps the configured portfolio subpath to the static files.
 5. For subpath hosting, the owner of the root domain must allow the portfolio in the root `/robots.txt` and reference the subpath sitemap. Crawlers only consult robots at the domain root.
 6. Confirm real-domain metadata, contact links, approved CV, image rights, and production performance before making the launch public.
 
 Local development without `SITE_URL` omits absolute metadata, disallows indexing, and returns an empty sitemap. Production loads `.env.production`. Set `SITE_URL` to an explicitly empty value for a non-indexable root-path preview, or use the host's access protection.
 
-Deployment uses static pages with the standard Next.js image service and redirects. It is not configured as `output: export`, which would remove those native features. A Node-compatible host is also supported with `npm run build` and `npm run start`.
+Deployment is a static Next.js export. Images are served directly from the export, the social preview is a static PNG, and redirects use Cloudflare Pages' static `_redirects` file. No runtime server is required.
 
 ## Browser and accessibility checks
 
-Start the production server first. The Chrome check uses installed Google Chrome; other engines can be installed when needed:
+Serve `out/` locally first. The Chrome check uses installed Google Chrome; other engines can be installed when needed:
 
 ```sh
 QA_URL=http://127.0.0.1:3000/co-founder/portfolio npm run test:browser
@@ -91,20 +92,13 @@ QA_URL=http://127.0.0.1:3000/co-founder/portfolio QA_BROWSER=firefox npm run tes
 QA_URL=http://127.0.0.1:3000/co-founder/portfolio QA_BROWSER=webkit npm run test:browser
 ```
 
-Set `QA_URL` to the local URL including the base path when testing subpath deployment. Screenshots and reports go to ignored `output/playwright/`. The suite covers all 13 pages at 320, 375, 768, 1024, and 1440 pixels; Chrome also runs axe at 375 and 1440. Keyboard tests check skip navigation, visible focus, modal containment, Escape, focus return, and navigation. Additional checks cover reduced motion, 200% text enlargement, no JavaScript, 404s, legacy redirects, and social preview output.
+Set `QA_URL` to the local URL including the base path when testing subpath deployment. Screenshots and reports go to ignored `output/playwright/`. The suite covers all 13 pages at 320, 375, 768, 1024, and 1440 pixels; Chrome also runs axe at 375 and 1440. Keyboard tests check skip navigation, visible focus, modal containment, Escape, focus return, and navigation. Additional checks cover reduced motion, 200% text enlargement, no JavaScript, 404s, and social preview output. Legacy redirects are validated by the content test and applied by Cloudflare Pages.
 
 Accessibility is based on semantic HTML, one H1, logical headings, 44px minimum targets, a skip link, visible focus, high-contrast tokens, native dialog interaction, no hover-only content, and reduced-motion support. Automated checks supplement visual and keyboard review; they are not a claim of formal WCAG certification.
 
-## GitHub handoff
+## Repository
 
-The user will provide the repository URL later. No remote is invented and nothing is pushed until that destination is known. After receiving an empty repository URL:
-
-```sh
-git remote add origin YOUR_REPOSITORY_URL
-git push -u origin main
-```
-
-If it already contains commits, fetch and inspect its history before integrating; do not force-push over existing work.
+The source repository is `https://github.com/PoomPak8119/Portfolio`.
 
 ## Implementation references
 

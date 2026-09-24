@@ -1,0 +1,7 @@
+/co-founder/portfolio/case-studies/tara /co-founder/portfolio/work/kmutt-edtech 301
+/co-founder/portfolio/case-studies/un-humanitarian-automation /co-founder/portfolio/work/un-vietnam-humanitarian-automation 301
+/co-founder/portfolio/case-studies/rag-virtual-patient /co-founder/portfolio/work/kbtg-virtual-patient 301
+/case-studies/tara /work/kmutt-edtech 301
+/case-studies/un-humanitarian-automation /work/un-vietnam-humanitarian-automation 301
+/case-studies/rag-virtual-patient /work/kbtg-virtual-patient 301
+/co-founder/portfolio/* /:splat 200

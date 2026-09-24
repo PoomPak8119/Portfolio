@@ -31,7 +31,7 @@ export function pageMetadata(
   const images = siteUrl
     ? [
         {
-          url: absoluteUrl("/social-preview")!,
+          url: absoluteUrl("/social-preview.png")!,
           width: 1200,
           height: 630,
           alt: `${profile.name} — ${profile.positioning}`,

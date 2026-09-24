@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { existsSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { projects, metrics } from "../content/projects.ts";
 import { profile } from "../content/profile.ts";
 import { experience } from "../content/experience.ts";
@@ -105,6 +105,14 @@ if (profile.cv)
     );
 if (profile.portrait.src)
   assert.ok(existsSync(`public${profile.portrait.src}`));
+const redirects = readFileSync("public/_redirects", "utf8");
+for (const [legacy, current] of [
+  ["tara", "kmutt-edtech"],
+  ["un-humanitarian-automation", "un-vietnam-humanitarian-automation"],
+  ["rag-virtual-patient", "kbtg-virtual-patient"],
+]) {
+  assert.match(redirects, new RegExp(`/case-studies/${legacy} /work/${current}`));
+}
 console.log(
   "Content integrity checks passed: routes, qualifiers, dates, links, and configured assets.",
 );

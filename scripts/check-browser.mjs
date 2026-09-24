@@ -78,7 +78,7 @@ try {
               .locator('meta[property="og:image"]')
               .getAttribute("content"),
           ).pathname,
-          `${basePath}/social-preview`,
+          `${basePath}/social-preview.png`,
         );
       }
       const problems = await page.evaluate(() => {
@@ -267,19 +267,7 @@ try {
       await page.getByRole("link", { name: "Return home" }).isVisible(),
     );
   }
-  for (const [legacy, current] of [
-    ["tara", "kmutt-edtech"],
-    ["un-humanitarian-automation", "un-vietnam-humanitarian-automation"],
-    ["rag-virtual-patient", "kbtg-virtual-patient"],
-  ]) {
-    const response = await page.request.get(
-      `${origin}/case-studies/${legacy}`,
-      { maxRedirects: 0 },
-    );
-    assert.equal(response.status(), 308);
-    assert.equal(response.headers().location, `${basePath}/work/${current}`);
-  }
-  const social = await page.request.get(origin + "/social-preview");
+  const social = await page.request.get(origin + "/social-preview.png");
   assert.equal(social.status(), 200);
   assert.match(social.headers()["content-type"], /image\/png/);
   for (const href of internalLinks) {
