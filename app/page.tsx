@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { profile, approach } from "@/content/profile";
 import { metrics, projects } from "@/content/projects";
+import { recognitions } from "@/content/recognition";
 import { ImageFrame, SectionHeading, ContactCta } from "@/components/ui";
 import { ProjectCard } from "@/components/project-card";
 import { ExperienceList } from "@/components/experience-list";
@@ -130,7 +131,49 @@ export default function Home() {
           <ExperienceList compact />
         </div>
       </section>
-      <section className="section" id="about" tabIndex={-1}>
+      <section className="section" id="recognition" tabIndex={-1}>
+        <div className="container">
+          <SectionHeading
+            label="External recognition"
+            title="Featured & Recognised"
+          />
+          <p className="lead recognition-intro">
+            Selected institutional features and recognition from organisations
+            I have studied and worked with.
+          </p>
+          <div className="recognition-grid">
+            {recognitions.map((recognition) => (
+              <article className="recognition-card" key={recognition.url}>
+                <ImageFrame image={recognition.image} />
+                <div className="recognition-card-copy">
+                  <p className="eyebrow">
+                    {recognition.platform} · {recognition.type === "institutional-feature"
+                      ? "University feature"
+                      : "Official social media feature"}
+                  </p>
+                  <h3>{recognition.title}</h3>
+                  <p className="recognition-organisation">
+                    {recognition.organisation}
+                  </p>
+                  <p>{recognition.description}</p>
+                  {recognition.date && (
+                    <time dateTime="2026-01-12">{recognition.date}</time>
+                  )}
+                  <a
+                    className="text-link"
+                    href={recognition.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {recognition.cta} <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="section soft" id="about" tabIndex={-1}>
         <div className="container about-preview">
           <div>
             <p className="eyebrow">A little about me</p>

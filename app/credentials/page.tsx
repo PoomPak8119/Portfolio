@@ -1,6 +1,11 @@
 import Link from "next/link";
 import { credentials, recommendations } from "@/content/credentials";
-import { ContactCta, PageIntro, SectionHeading } from "@/components/ui";
+import {
+  ContactCta,
+  ImageFrame,
+  PageIntro,
+  SectionHeading,
+} from "@/components/ui";
 import { pageMetadata } from "@/lib/metadata";
 import { assetPath } from "@/lib/paths";
 
@@ -27,6 +32,11 @@ export default function Credentials() {
           <div className="credentials-list">
             {credentials.map((credential) => (
               <article className="case-summary" key={credential.title}>
+                {credential.image && (
+                  <div className="credential-preview">
+                    <ImageFrame image={credential.image} />
+                  </div>
+                )}
                 <p className="eyebrow">{credential.type}</p>
                 <h3>{credential.title}</h3>
                 <p className="font-medium text-navy mt-4">

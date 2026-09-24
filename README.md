@@ -63,6 +63,8 @@ Null images render on the server without image requests. Configured images have 
 
 The public educational certificate collection is configured in `content/credentials.ts`. Put approved certificate PDFs in `public/documents/certificates/` and recommendation letters in `public/documents/recommendations/`, then add their public paths to the matching data array. Do not add a record until its file exists.
 
+Certificate preview images live in `public/images/credentials/`. Export the complete first PDF page as a PNG, keep it uncropped, and add its image metadata to the matching record in `content/credentials.ts`. Recommendation letters remain link-only unless publication of a visual preview is explicitly approved.
+
 Before publishing a document, review it for private phone numbers, addresses, personal email addresses, employee IDs, internal references, signatures, confidential wording, and private organisational information. Do not alter an official document in the repository; obtain an approved public or redacted copy from the owner. Use descriptive filenames and link labels that identify the destination and file type.
 
 ## Deployment to Vercel
