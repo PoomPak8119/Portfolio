@@ -3,6 +3,7 @@ import { profile } from "@/content/profile";
 
 const configuredUrl = process.env.SITE_URL?.trim();
 export const siteUrl = configuredUrl ? new URL(configuredUrl) : undefined;
+export const homepageUrl = siteUrl ? new URL("/", siteUrl).href : "/";
 if (
   siteUrl &&
   (siteUrl.protocol !== "https:" ||

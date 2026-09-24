@@ -4,7 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { profile } from "@/content/profile";
 import { Navigation, CvAction } from "@/components/navigation";
-import { siteUrl } from "@/lib/metadata";
+import { homepageUrl, siteUrl } from "@/lib/metadata";
 
 const roboto = localFont({
   src: [
@@ -54,9 +54,9 @@ export default function RootLayout({
         </a>
         <header className="site-header">
           <div className="container">
-            <Link
+            <a
               className="name-mark"
-              href="/"
+              href={homepageUrl}
               aria-label="Passapol Phukhang. — home"
             >
               Passapol{" "}
@@ -66,7 +66,7 @@ export default function RootLayout({
                   .
                 </span>
               </span>
-            </Link>
+            </a>
             <Navigation />
           </div>
         </header>
@@ -77,9 +77,9 @@ export default function RootLayout({
           <div className="container">
             <div className="footer-top">
               <div>
-                <Link className="footer-name" href="/">
+                <a className="footer-name" href={homepageUrl}>
                   {profile.name}
-                </Link>
+                </a>
                 <p>
                   At the intersection of business,
                   <br />

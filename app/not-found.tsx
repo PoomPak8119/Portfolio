@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { homepageUrl } from "@/lib/metadata";
 
 export default function NotFound() {
   return (
@@ -11,9 +12,9 @@ export default function NotFound() {
           selected work.
         </p>
         <div className="hero-actions">
-          <Link href="/" className="button button-primary">
+          <a href={homepageUrl} className="button button-primary">
             Return home
-          </Link>
+          </a>
           <Link href="/work" className="button button-outline">
             View selected work
           </Link>
