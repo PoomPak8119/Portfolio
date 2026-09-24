@@ -7,13 +7,13 @@ export type Education = {
 };
 export const education: Education[] = [
   {
-    institution: "University College Dublin",
+    institution: "UCD Michael Smurfit Graduate Business School, University College Dublin",
     qualification: "Master’s Degree in Digital Innovation",
     period: "August 2026–Present",
     country: "Ireland",
   },
   {
-    institution: "King Mongkut’s University of Technology Thonburi",
+    institution: "King Mongkut’s University of Technology Thonburi (KMUTT)",
     qualification: "Bachelor’s Degree in Computer Science",
     period: "August 2021–December 2025",
     country: "Thailand",
