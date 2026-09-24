@@ -157,7 +157,7 @@ export default function Home() {
                   </p>
                   <p>{recognition.description}</p>
                   {recognition.date && (
-                    <time dateTime="2026-01-12">{recognition.date}</time>
+                    <time dateTime={recognition.dateISO}>{recognition.date}</time>
                   )}
                   <a
                     className="text-link"

@@ -4,6 +4,7 @@ import { projects, metrics } from "../content/projects.ts";
 import { profile } from "../content/profile.ts";
 import { experience } from "../content/experience.ts";
 import { credentials, recommendations } from "../content/credentials.ts";
+import { recognitions } from "../content/recognition.ts";
 
 assert.equal(
   new Set(projects.map((project) => project.slug)).size,
@@ -67,18 +68,32 @@ assert.match(
     .text,
   /UN Resident Coordinator/,
 );
-for (const credential of credentials)
+for (const credential of credentials) {
+  if (credential.image?.src)
+    assert.ok(
+      existsSync(`public${credential.image.src}`),
+      `Missing credential image: ${credential.image.src}`,
+    );
   if (credential.href.startsWith("https://")) new URL(credential.href);
   else
     assert.ok(
       existsSync(`public${credential.href}`),
       `Missing credential: ${credential.href}`,
     );
+}
 for (const recommendation of recommendations)
   assert.ok(
     existsSync(`public${recommendation.href}`),
     `Missing recommendation: ${recommendation.href}`,
   );
+for (const recognition of recognitions) {
+  assert.equal(new URL(recognition.url).protocol, "https:");
+  assert.ok(recognition.image.src && recognition.image.alt);
+  assert.ok(
+    existsSync(`public${recognition.image.src}`),
+    `Missing recognition image: ${recognition.image.src}`,
+  );
+}
 assert.equal(experience[0].period, "February–June 2026");
 assert.equal(experience[3].period, "June–August 2024");
 if (profile.cv)
