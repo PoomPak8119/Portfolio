@@ -13,6 +13,7 @@ export type Project = {
   tags: string[];
   featured: boolean;
   image: PortfolioImage;
+  gallery?: PortfolioImage[];
   workflow?: { title: string; text: string }[];
   sections: { title: string; text: string }[];
   evidence?: { label: string; href: string };
@@ -223,6 +224,15 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "227/30",
     },
+    gallery: [
+      {
+        src: null,
+        filename: "un-thailand-digest-output-public.png",
+        alt: "Approved example of the United Nations Thailand political intelligence digest",
+        placeholderLabel: "Briefing output image coming soon",
+        aspectRatio: "3/4",
+      },
+    ],
     sections: [
       {
         title: "My role",
@@ -248,11 +258,11 @@ export const projects: Project[] = [
     tags: ["Business analysis", "Digital transformation"],
     featured: false,
     image: {
-      src: null,
+      src: "/images/projects/aot-digital-experience.jpg",
       filename: "aot-digital-experience.jpg",
-      alt: "Approved website experience recommendations from the Airports of Thailand internship",
+      alt: "Before-and-after comparison from an Airports of Thailand website analysis",
       placeholderLabel: "Project image to be added",
-      aspectRatio: "4/3",
+      aspectRatio: "16/9",
     },
     sections: [
       {

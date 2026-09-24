@@ -58,8 +58,11 @@ export default async function ProjectPage({
       </section>
       <section className="section">
         <div className="container">
-          <div className="case-image">
+          <div className={project.gallery ? "case-gallery" : "case-image"}>
             <ImageFrame image={project.image} />
+            {project.gallery?.map((image) => (
+              <ImageFrame image={image} key={image.filename} />
+            ))}
           </div>
           <div className="case-body">
             <div className="prose">

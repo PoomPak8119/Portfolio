@@ -22,6 +22,12 @@ for (const project of projects) {
       existsSync(`public${project.image.src}`),
       `Missing image: ${project.image.src}`,
     );
+  for (const image of project.gallery ?? [])
+    if (image.src)
+      assert.ok(
+        existsSync(`public${image.src}`),
+        `Missing gallery image: ${image.src}`,
+      );
   if (project.evidence)
     assert.equal(new URL(project.evidence.href).protocol, "https:");
 }

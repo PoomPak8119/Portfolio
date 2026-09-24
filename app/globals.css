@@ -580,6 +580,16 @@ nav a[aria-current="page"] {
   max-width: 800px;
   margin: 0 auto 64px;
 }
+.case-gallery {
+  display: grid;
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto 64px;
+}
+.case-gallery > .image-frame:not(:first-child) {
+  width: min(100%, 480px);
+  justify-self: center;
+}
 .case-body {
   display: grid;
   gap: 48px;
