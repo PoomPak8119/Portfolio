@@ -14,7 +14,9 @@ export type Project = {
   featured: boolean;
   image: PortfolioImage;
   gallery?: PortfolioImage[];
+  workflowTitle?: string;
   workflow?: { title: string; text: string }[];
+  toolkit?: string[];
   sections: { title: string; text: string }[];
   evidence?: { label: string; href: string };
 };
@@ -47,44 +49,51 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "16/9",
     },
+    workflowTitle: "From fragmented data to leadership insight",
     workflow: [
       {
-        title: "Discover",
-        text: "Gather requirements from UN colleagues and understand how the information would be used.",
-      },
-      {
-        title: "Structure",
-        text: "Define the required data and centralise initiative information using Excel.",
+        title: "Coordinate",
+        text: "Gather leadership requirements and collaborate with colleagues through SharePoint, Teams, and email around the initiative data.",
       },
       {
         title: "Prepare",
-        text: "Clean, organise, and standardise the collected information.",
+        text: "Remove duplicates, standardise labels, and restructure columns in the Excel master dataset.",
       },
       {
-        title: "Augment",
-        text: "Use AI as a support tool for analysis, problem-solving, learning, and dashboard development.",
+        title: "Align",
+        text: "Co-develop the comparison logic with a colleague and use generative AI to identify classification patterns across initiative descriptions, tags, and organisations.",
       },
       {
         title: "Visualise",
-        text: "Build a Tableau dashboard showing UN contributions and alignment with national priorities.",
-      },
-      {
-        title: "Tell the story",
-        text: "Translate the dashboard and underlying data into clear strategic narratives.",
+        text: "Build the Tableau dashboard, turning the structured data into accessible comparisons and alignment views.",
       },
       {
         title: "Communicate",
-        text: "Prepare the insights for UN–Government consultation and senior UN leadership.",
+        text: "Translate the findings into a concise data story and present it directly to the UN Resident Coordinator.",
       },
+    ],
+    toolkit: [
+      "Excel",
+      "Tableau",
+      "Generative AI",
+      "Requirements gathering",
+      "Data cleaning",
+      "Collaborative analysis",
+      "Dashboard development",
+      "Data storytelling",
     ],
     sections: [
       {
         title: "My role",
-        text: "I worked with UN colleagues to gather requirements and translate the organisational need into a practical data workflow. I supported the project from data collection and cleaning through dashboard development, visualisation, storytelling, and leadership reporting.",
+        text: "I gathered requirements and translated the organisational need into a practical data workflow. A colleague led most of the data collection; I cleaned and standardised the Excel dataset, co-developed the alignment logic, built the Tableau dashboard, and prepared the leadership narrative.",
       },
       {
         title: "AI as augmentation",
-        text: "I used AI to support parts of my workflow, including analysis, problem-solving, learning, structuring, and dashboard development. I remained responsible for gathering requirements, preparing the data, analysing alignment, building the Tableau dashboard, and communicating the results.",
+        text: "I used generative AI to support roadmap planning, identify candidate patterns across initiative data and national-priority categories, and occasionally learn or troubleshoot Tableau. The comparison logic was co-developed with a colleague, and I remained responsible for preparing the data, building the dashboard, interpreting its views, and communicating the final story.",
+      },
+      {
+        title: "Deliverables",
+        text: "The work produced a cleaned Excel dataset, an initiative-to-priority alignment structure, a Tableau dashboard, and a short data-storytelling presentation for leadership.",
       },
       {
         title: "Outcome",
@@ -233,10 +242,47 @@ export const projects: Project[] = [
         aspectRatio: "3/4",
       },
     ],
+    workflowTitle: "How the intelligence workflow worked",
+    workflow: [
+      {
+        title: "Understand",
+        text: "Gather briefing requirements from UN Thailand leadership and learn how the economist previously carried out the analysis.",
+      },
+      {
+        title: "Translate",
+        text: "Co-design the relevance criteria and system prompt with the economist around UN Thailand’s information needs.",
+      },
+      {
+        title: "Automate",
+        text: "Use n8n to retrieve news through HTTP and RSS, process the content, and format the digest in HTML and CSS.",
+      },
+      {
+        title: "Augment with AI",
+        text: "Use Gemini through OpenRouter to score relevance and create source-grounded executive summaries with citations and original news links.",
+      },
+      {
+        title: "Review and distribute",
+        text: "Email the draft to the economist for human review before UN Thailand sends approved content to the UN Country Team.",
+      },
+    ],
+    toolkit: [
+      "n8n",
+      "Gemini via OpenRouter",
+      "Requirements gathering",
+      "Workflow analysis",
+      "Prompt design",
+      "AI-assisted relevance scoring",
+      "Workflow automation",
+      "Human-in-the-loop review",
+    ],
     sections: [
       {
         title: "My role",
-        text: "I worked on the AI-powered political intelligence digest as a Junior Digital Transformation Consultant with United Nations Thailand.",
+        text: "I gathered requirements from UN Thailand leadership, learned the economist’s existing analytical process, and translated it into an automated n8n workflow. The workflow combined news retrieval, AI-assisted analysis, HTML formatting, and SMTP email delivery.",
+      },
+      {
+        title: "Pilot and feedback",
+        text: "The digest was piloted with participating agencies, and feedback was collected through Microsoft Forms. My contract ended before the next feedback cycle was implemented.",
       },
       {
         title: "Outcome",

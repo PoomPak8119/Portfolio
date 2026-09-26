@@ -72,7 +72,7 @@ export default async function ProjectPage({
               </section>
               {project.workflow && (
                 <section className="mb-12">
-                  <h2>Approach</h2>
+                  <h2>{project.workflowTitle ?? "Approach"}</h2>
                   <ol className="case-workflow">
                     {project.workflow.map((step, index) => (
                       <li key={step.title}>
@@ -84,6 +84,16 @@ export default async function ProjectPage({
                       </li>
                     ))}
                   </ol>
+                </section>
+              )}
+              {project.toolkit && (
+                <section className="mb-12">
+                  <h2>Workflow toolkit</h2>
+                  <ul className="tags" aria-label="Project tools and methods">
+                    {project.toolkit.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </section>
               )}
               {project.sections.map((section) => (
