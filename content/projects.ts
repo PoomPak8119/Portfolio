@@ -10,13 +10,16 @@ export type Project = {
   summary: string;
   challenge: string;
   outcome: string;
+  atAGlance?: string;
   tags: string[];
   featured: boolean;
   image: PortfolioImage;
   gallery?: PortfolioImage[];
+  ownership?: string;
   workflowTitle?: string;
   workflow?: { title: string; text: string }[];
-  toolkit?: string[];
+  tools?: string[];
+  methods?: string[];
   sections: { title: string; text: string }[];
   evidence?: { label: string; href: string };
 };
@@ -30,17 +33,14 @@ export const projects: Project[] = [
     period: "June–December 2025",
     role: "Junior Officer for Digital Transformation",
     summary:
-      "Supported a high-priority, one-time UN–Government digital cooperation initiative by transforming fragmented information on UN Country Team activities into a centralised view of how initiatives aligned with Viet Nam’s national development priorities.",
+      "Supported a high-priority, one-time UN–Government cooperation initiative to create a centralised view of how UN Country Team activities aligned with Viet Nam’s national development priorities.",
     challenge:
-      "Create a clearer way to understand and communicate how UN Country Team initiatives contributed to Viet Nam’s national priorities.",
+      "The UN Country Team needed fragmented initiative information structured consistently and communicated clearly for strategic consultation and leadership decision-making.",
     outcome:
       "Translated initiative-level information into leadership-ready insights for UN–Government consultation and senior UN stakeholders.",
-    tags: [
-      "Requirements gathering",
-      "Excel & data preparation",
-      "Tableau & data storytelling",
-      "AI-augmented workflow",
-    ],
+    atAGlance:
+      "A centralised view of UN Country Team contributions and alignment with Viet Nam’s national priorities.",
+    tags: ["Strategic alignment", "Data visualisation", "Executive reporting"],
     featured: true,
     image: {
       src: "/images/projects/un-vietnam-strategic-alignment-dashboard.png",
@@ -49,11 +49,13 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "16/9",
     },
+    ownership:
+      "I was responsible for gathering and translating requirements, cleaning and standardising the Excel dataset, building the Tableau dashboard, and preparing the leadership narrative. A colleague led most of the data collection, and we co-developed the alignment and comparison logic.",
     workflowTitle: "From fragmented data to leadership insight",
     workflow: [
       {
         title: "Coordinate",
-        text: "Gather leadership requirements and collaborate with colleagues through SharePoint, Teams, and email around the initiative data.",
+        text: "Clarify leadership information needs and collaborate with colleagues around the initiative data.",
       },
       {
         title: "Prepare",
@@ -61,43 +63,43 @@ export const projects: Project[] = [
       },
       {
         title: "Align",
-        text: "Co-develop the comparison logic with a colleague and use generative AI to identify classification patterns across initiative descriptions, tags, and organisations.",
+        text: "Co-develop a consistent comparison structure for mapping initiative descriptions, tags, and organisations against national-priority categories.",
       },
       {
         title: "Visualise",
-        text: "Build the Tableau dashboard, turning the structured data into accessible comparisons and alignment views.",
+        text: "Build the Tableau dashboard and translate the structured data into accessible alignment views.",
       },
       {
         title: "Communicate",
-        text: "Translate the findings into a concise data story and present it directly to the UN Resident Coordinator.",
+        text: "Develop a concise data story and present the resulting insights directly to the UN Resident Coordinator.",
       },
     ],
-    toolkit: [
-      "Excel",
+    tools: [
+      "Microsoft Excel",
       "Tableau",
       "Generative AI",
+    ],
+    methods: [
       "Requirements gathering",
-      "Data cleaning",
+      "Data cleaning and standardisation",
+      "AI-assisted classification",
       "Collaborative analysis",
       "Dashboard development",
       "Data storytelling",
+      "Executive presentation",
     ],
     sections: [
       {
-        title: "My role",
-        text: "I gathered requirements and translated the organisational need into a practical data workflow. A colleague led most of the data collection; I cleaned and standardised the Excel dataset, co-developed the alignment logic, built the Tableau dashboard, and prepared the leadership narrative.",
-      },
-      {
         title: "AI as augmentation",
-        text: "I used generative AI to support roadmap planning, identify candidate patterns across initiative data and national-priority categories, and occasionally learn or troubleshoot Tableau. The comparison logic was co-developed with a colleague, and I remained responsible for preparing the data, building the dashboard, interpreting its views, and communicating the final story.",
+        text: "Generative AI supported roadmap planning, suggested candidate patterns between initiative records and national-priority categories, and helped with occasional Tableau learning and troubleshooting. It did not independently determine the final alignment. The comparison logic was co-developed with a colleague, while I remained accountable for preparing the data, building and interpreting the dashboard, and communicating the final narrative.",
       },
       {
         title: "Deliverables",
-        text: "The work produced a cleaned Excel dataset, an initiative-to-priority alignment structure, a Tableau dashboard, and a short data-storytelling presentation for leadership.",
+        text: "A cleaned Excel dataset, an initiative-to-priority alignment structure, a Tableau dashboard, and a concise leadership data-storytelling presentation.",
       },
       {
         title: "Outcome",
-        text: "The project created a more centralised and visual way to understand UN Country Team contributions and their alignment with Viet Nam’s national priorities. It supported strategic UN–Government consultation through structured data, visualisation, and data storytelling. I reported the resulting analysis to senior leadership, including the UN Resident Coordinator.",
+        text: "The project created a more centralised and visual way to understand UN Country Team contributions and their alignment with Viet Nam’s national priorities. It supported strategic UN–Government consultation and enabled leadership-ready reporting, including a presentation to the UN Resident Coordinator.",
       },
     ],
   },
@@ -220,11 +222,11 @@ export const projects: Project[] = [
     period: "February–June 2026",
     role: "Junior Digital Transformation Consultant",
     summary:
-      "An AI-powered digest supporting weekly UN Country Team briefing preparation.",
+      "An AI-assisted political intelligence digest developed to reduce the manual preparation required for weekly UN Country Team briefings.",
     challenge:
-      "Reduce manual preparation for recurring political intelligence briefings.",
+      "UN Thailand needed a more efficient way to prepare recurring political intelligence briefings while preserving the contextual judgement and editorial review behind the existing process.",
     outcome: "6 hours per week saved in manual briefing preparation.",
-    tags: ["AI adoption", "Workflow automation"],
+    tags: ["AI-assisted workflow", "Human review"],
     featured: false,
     image: {
       src: "/images/projects/un-thailand-workflow.png",
@@ -242,15 +244,17 @@ export const projects: Project[] = [
         aspectRatio: "3/4",
       },
     ],
+    ownership:
+      "I owned development of the automated workflow from requirements translation through prototype and pilot. I worked with UN Thailand leadership and the economist to preserve the judgement behind the existing analysis while automating repetitive preparation. The economist reviewed each draft, and UN Thailand retained responsibility for approving and distributing the final digest.",
     workflowTitle: "How the intelligence workflow worked",
     workflow: [
       {
         title: "Understand",
-        text: "Gather briefing requirements from UN Thailand leadership and learn how the economist previously carried out the analysis.",
+        text: "Clarify briefing requirements with UN Thailand leadership and learn how the economist previously conducted the analysis.",
       },
       {
         title: "Translate",
-        text: "Co-design the relevance criteria and system prompt with the economist around UN Thailand’s information needs.",
+        text: "Co-design relevance criteria and a system prompt reflecting UN Thailand’s information needs.",
       },
       {
         title: "Automate",
@@ -262,31 +266,31 @@ export const projects: Project[] = [
       },
       {
         title: "Review and distribute",
-        text: "Email the draft to the economist for human review before UN Thailand sends approved content to the UN Country Team.",
+        text: "Email the draft to the economist for human review before UN Thailand distributes approved content to the UN Country Team.",
       },
     ],
-    toolkit: [
+    tools: [
       "n8n",
       "Gemini via OpenRouter",
+      "HTTP/RSS",
+      "HTML/CSS",
+      "SMTP",
+    ],
+    methods: [
       "Requirements gathering",
       "Workflow analysis",
       "Prompt design",
       "AI-assisted relevance scoring",
-      "Workflow automation",
       "Human-in-the-loop review",
     ],
     sections: [
       {
-        title: "My role",
-        text: "I gathered requirements from UN Thailand leadership, learned the economist’s existing analytical process, and translated it into an automated n8n workflow. The workflow combined news retrieval, AI-assisted analysis, HTML formatting, and SMTP email delivery.",
-      },
-      {
         title: "Pilot and feedback",
-        text: "The digest was piloted with participating agencies, and feedback was collected through Microsoft Forms. My contract ended before the next feedback cycle was implemented.",
+        text: "The digest was piloted with participating agencies, with feedback collected through Microsoft Forms to inform further iteration. My assignment concluded before the next feedback cycle was implemented.",
       },
       {
         title: "Outcome",
-        text: "The digest reduced weekly UN Country Team briefing preparation by 6 hours. This summary excludes internal briefing content and confidential systems.",
+        text: "The workflow reduced manual preparation for the weekly UN Country Team briefing by six hours per week.",
       },
     ],
   },

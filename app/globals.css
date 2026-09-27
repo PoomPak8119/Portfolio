@@ -616,6 +616,16 @@ nav a[aria-current="page"] {
 .case-workflow h3 {
   margin-bottom: 8px;
 }
+.tool-method-group + .tool-method-group {
+  margin-top: 24px;
+}
+.tool-method-group h3 {
+  color: var(--navy-900);
+  font-size: 1rem;
+}
+.tool-method-group .tags {
+  margin-top: 12px;
+}
 .tags {
   display: flex;
   flex-wrap: wrap;

@@ -13,7 +13,7 @@ export const experience: Experience[] = [
     location: "Thailand",
     period: "February–June 2026",
     summary:
-      "AI-powered political intelligence digest supporting weekly UN Country Team briefing preparation.",
+      "Translated leadership requirements and an economist’s analytical process into a human-reviewed political intelligence workflow supporting weekly UN Country Team briefings.",
     project: "un-thailand-ai-intelligence",
   },
   {
@@ -22,7 +22,7 @@ export const experience: Experience[] = [
     location: "Viet Nam",
     period: "June–December 2025",
     summary:
-      "Supported a high-priority UN–Government digital cooperation project aligning UN Country Team initiatives with Viet Nam’s national development priorities, translating stakeholder requirements into an Excel and Tableau workflow and delivering data visualisation and storytelling for consultation and senior UN leadership.",
+      "Translated organisational requirements into a centralised view of how UN Country Team initiatives aligned with Viet Nam’s national priorities, supporting strategic consultation and senior leadership reporting.",
     project: "un-vietnam-strategic-alignment",
   },
   {

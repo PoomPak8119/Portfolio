@@ -70,6 +70,12 @@ export default async function ProjectPage({
                 <h2>The challenge</h2>
                 <p>{project.challenge}</p>
               </section>
+              {project.ownership && (
+                <section className="mb-12">
+                  <h2>My role</h2>
+                  <p>{project.ownership}</p>
+                </section>
+              )}
               {project.workflow && (
                 <section className="mb-12">
                   <h2>{project.workflowTitle ?? "Approach"}</h2>
@@ -86,14 +92,29 @@ export default async function ProjectPage({
                   </ol>
                 </section>
               )}
-              {project.toolkit && (
+              {(project.tools || project.methods) && (
                 <section className="mb-12">
-                  <h2>Workflow toolkit</h2>
-                  <ul className="tags" aria-label="Project tools and methods">
-                    {project.toolkit.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
+                  <h2>Tools &amp; Methods</h2>
+                  {project.tools && (
+                    <div className="tool-method-group">
+                      <h3>Tools and technology</h3>
+                      <ul className="tags" aria-label="Project tools and technology">
+                        {project.tools.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {project.methods && (
+                    <div className="tool-method-group">
+                      <h3>Methods</h3>
+                      <ul className="tags" aria-label="Project methods">
+                        {project.methods.map((item) => (
+                          <li key={item}>{item}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
                 </section>
               )}
               {project.sections.map((section) => (
@@ -114,7 +135,9 @@ export default async function ProjectPage({
             </div>
             <aside className="case-summary" aria-label="Project at a glance">
               <h2>At a glance</h2>
-              <p className="font-medium text-navy">{project.outcome}</p>
+              <p className="font-medium text-navy">
+                {project.atAGlance ?? project.outcome}
+              </p>
               <ul className="tags" aria-label="Project themes">
                 {project.tags.map((tag) => (
                   <li key={tag}>{tag}</li>

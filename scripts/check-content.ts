@@ -58,16 +58,29 @@ assert.match(
 const strategicAlignment = projects.find(
   (project) => project.slug === "un-vietnam-strategic-alignment",
 )!;
-assert.ok(strategicAlignment.workflow?.length === 7);
+assert.equal(strategicAlignment.workflow?.length, 5);
+assert.ok(strategicAlignment.tools?.includes("Tableau"));
+assert.ok(strategicAlignment.methods?.includes("AI-assisted classification"));
 assert.match(
-  strategicAlignment.workflow!.find((step) => step.title === "Augment")!.text,
-  /support tool/,
+  strategicAlignment.sections.find(
+    (section) => section.title === "AI as augmentation",
+  )!.text,
+  /did not independently determine/,
 );
 assert.match(
   strategicAlignment.sections.find((section) => section.title === "Outcome")!
     .text,
   /UN Resident Coordinator/,
 );
+const intelligenceDigest = projects.find(
+  (project) => project.slug === "un-thailand-ai-intelligence",
+)!;
+assert.equal(intelligenceDigest.workflow?.length, 5);
+assert.ok(intelligenceDigest.tools?.includes("n8n"));
+assert.ok(
+  intelligenceDigest.methods?.includes("Human-in-the-loop review"),
+);
+assert.match(intelligenceDigest.ownership!, /retained responsibility/);
 for (const credential of credentials) {
   if (credential.image?.src)
     assert.ok(
