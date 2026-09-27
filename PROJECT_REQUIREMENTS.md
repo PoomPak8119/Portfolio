@@ -24,8 +24,8 @@ Build a fast, accessible portfolio that demonstrates Passapol Phukhang's fit for
 - Change AOT from "June 2024-August 2025" to **June-August 2024**.
 - Present the MSc in Digital Innovation at UCD as **August 2026-present**.
 - Use **Dublin, Ireland** as the current location.
-- Retain "estimated" for the 60% humanitarian data-processing result.
-- Retain the 20-student sample size with the 50% TARA engagement result.
+- Describe the observed humanitarian processing comparison as more than ten minutes manually versus approximately two minutes assisted; do not attribute it to the separate automation pilot.
+- Describe TARA classroom feedback qualitatively; the former 50% engagement figure and 20-student count are not verified.
 - Attribute collaborative work accurately, including "co-developed" or "co-architected" where appropriate.
 
 ### Interaction
@@ -117,4 +117,3 @@ The MVP is complete when:
 - Blog, newsletter, search, accounts, comments, multilingual content, CMS, contact form, chatbot, and private analytics dashboard.
 - Full certification archive; link to an approved external collection instead.
 - Detailed disclosure of confidential organisational systems or data.
-

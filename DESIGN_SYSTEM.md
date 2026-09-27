@@ -766,32 +766,32 @@ Metric cards should contain:
 Example:
 
 ```text
-60%
+≈2 min
 
-Estimated reduction in humanitarian
-data-processing time
+Initial assisted document task,
+compared with more than ten minutes manually
 
-AI automation initiative
+Humanitarian information processing
 United Nations Viet Nam
 ```
 
 Always preserve qualifiers.
 
-Do not turn:
+Do not turn an observed initial comparison:
 
 ```text
-estimated 60%
+approximately two minutes assisted versus more than ten minutes manually
 ```
 
-into:
+into an unsupported general claim such as:
 
 ```text
-60%
+an 80% improvement across all humanitarian operations
 ```
 
-without qualification if the evidence is estimated.
+Do not attribute the observed assisted-workflow timing to the separate automation pilot.
 
-Likewise, maintain pilot sample sizes where they materially affect interpretation.
+Do not publish an unverified pilot sample size or engagement percentage.
 
 ---
 
@@ -812,7 +812,7 @@ Example content structure:
 ```text
 United Nations Viet Nam
 
-Humanitarian Data Automation
+Humanitarian Document Processing
 
 Reducing repetitive humanitarian
 information-processing work through
@@ -822,7 +822,8 @@ Role
 Digital Transformation Officer
 
 Impact
-~60% estimated processing-time reduction
+An initial assisted task took approximately two minutes,
+versus more than ten minutes manually
 
 View case study →
 ```
@@ -1508,30 +1509,30 @@ Examples:
 Correct:
 
 ```text
-Estimated 60% reduction in processing time
+An initial humanitarian document task took more than ten minutes manually and approximately two minutes with assistance.
 ```
 
 Incorrect:
 
 ```text
-Reduced processing time by 60%
+The automation pilot reduced operational processing time by 80%.
 ```
 
-unless independently measured and verified.
+The pilot was not deployed operationally, and its accuracy had not been sufficiently validated.
 
 Correct:
 
 ```text
-50% increase in engagement across a 20-student pilot
+TARA received positive feedback from the teacher and students after a classroom test.
 ```
 
 Incorrect:
 
 ```text
-Increased student engagement by 50%
+TARA increased student engagement by 50%.
 ```
 
-if the pilot context is removed in a way that overstates the evidence.
+The engagement percentage and student count have not been verified.
 
 Design must strengthen evidence, not exaggerate it.
 

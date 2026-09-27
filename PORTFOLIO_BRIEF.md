@@ -35,10 +35,10 @@ Passapol is not positioned as a generalist developer. His advantage is connectin
 | Evidence | Portfolio use |
 |---|---|
 | Reduced weekly UN Country Team briefing preparation by 6 hours | Hero proof point or UN Thailand case study |
-| Reduced humanitarian data-processing time by an estimated 60% | UN Viet Nam case study; retain the word "estimated" |
-| Led a 4-person, 12-month education product from discovery to pilot | TARA case study |
-| Increased engagement by 50% in a 20-student pilot | TARA outcome; always include the sample size |
-| Co-developed a RAG virtual-patient simulator as an alternative to imported multi-million-THB hardware | KBTG case study; do not imply sole ownership |
+| Initial humanitarian document processing took more than ten minutes manually and approximately two minutes with assistance | UN Viet Nam case study; distinguish this operational result from the separate automation pilot |
+| Managed the TARA education product from idea to classroom pilot | TARA case study; do not imply sole implementation of every feature |
+| Positive teacher and student feedback after a classroom test | TARA outcome; no verified engagement percentage or student count |
+| Co-developed and evaluated a virtual-patient simulator using rules, prompts, and RAG | KBTG case study; do not imply sole ownership or unverified stakeholder validation |
 | Invited speaker at a UN Asia-Pacific webinar with 300+ participants | About or speaking proof point |
 | Experience across Thailand, Viet Nam, Czech Republic, the United States, and Ireland | About section and international perspective |
 
@@ -88,4 +88,3 @@ Use `passapolpoom@gmail.com` as the public email unless Passapol selects a long-
 - `Passapol_Phukhang.pdf`
 - [Current Canva portfolio](https://passapolportfolio.my.canva.site/)
 - [LinkedIn profile](https://www.linkedin.com/in/passapol-phukhang)
-

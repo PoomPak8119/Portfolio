@@ -1,6 +1,6 @@
 # Content Strategy
 
-Last updated: 22 September 2026
+Last updated: 27 September 2026
 
 ## Content objective
 
@@ -10,7 +10,7 @@ Turn a broad record of education, employment, and projects into a focused story:
 
 1. **Value:** Translate complex needs into useful digital and AI solutions.
 2. **Credibility:** United Nations, KBTG, AOT, KMUTT, and UCD experience.
-3. **Proof:** 6 hours saved per week, an estimated 60% reduction in processing time, and a 50% engagement increase in a 20-student pilot.
+3. **Proof:** 6 hours saved per week in briefing preparation, an initial humanitarian document task reduced from more than ten minutes manually to approximately two minutes assisted, and positive classroom feedback on TARA.
 4. **Method:** Business analysis, user research, design thinking, agile delivery, stakeholder engagement, and applied AI.
 5. **Motivation:** Responsible technology that strengthens institutions, education, and social impact.
 
@@ -56,11 +56,12 @@ Demonstrate cross-cultural work across Thailand, Viet Nam, Czech Republic, the U
 
 Publish the strongest three first:
 
-1. **TARA EdTech platform** - the most complete public story, with ownership, process, pilot, and measured outcome.
-2. **UN humanitarian data automation** - strongest operational result; publish only non-sensitive process and outcome details.
-3. **RAG virtual-patient simulator** - demonstrates requirements gathering, AI engineering, and healthcare stakeholder validation.
+1. **UN–Government strategic alignment** - requirements, shared data preparation, Tableau visualisation, and leadership reporting.
+2. **TARA EdTech platform** - project management, learning product development, and a classroom pilot with qualitative feedback.
+3. **UN humanitarian document processing** - distinguish the operational assisted workflow from the unvalidated automation pilot.
+4. **RAG virtual-patient simulator** - requirements gathering, AI configuration, and answer evaluation during a co-development internship.
 
-Keep the political intelligence digest, AOT website recommendations, EcoGuide, and XS Life as concise supporting work until enough public evidence exists for a full case study.
+Keep the political intelligence digest and AOT website recommendations as supporting work. Their individual pages now contain verified process details.
 
 ## Case-study template
 
@@ -107,4 +108,3 @@ Use these topics naturally, not as a keyword list: digital transformation, busin
 - Add a new case study only when it has a clear role, approved evidence, and a defensible outcome.
 - Replace an older secondary item rather than expanding the homepage indefinitely.
 - Keep LinkedIn as the activity channel; no portfolio blog is needed for the MVP.
-
