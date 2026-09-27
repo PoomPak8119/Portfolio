@@ -5,6 +5,7 @@ export type Experience = {
   period: string;
   summary: string;
   project: string;
+  logo: string;
 };
 export const experience: Experience[] = [
   {
@@ -15,6 +16,7 @@ export const experience: Experience[] = [
     summary:
       "Translated leadership requirements and an economist’s analytical process into a human-reviewed political intelligence workflow supporting weekly UN Country Team briefings.",
     project: "un-thailand-ai-intelligence",
+    logo: "/logos/experience/un-thailand.png",
   },
   {
     organisation: "United Nations Viet Nam",
@@ -24,6 +26,7 @@ export const experience: Experience[] = [
     summary:
       "Supported UN–Government strategic alignment through requirements, data visualisation, and leadership reporting; also developed an assisted humanitarian document workflow and a separate automation pilot.",
     project: "un-vietnam-strategic-alignment",
+    logo: "/logos/experience/un-vietnam.png",
   },
   {
     organisation: "Kasikorn Business-Technology Group (KBTG)",
@@ -33,6 +36,7 @@ export const experience: Experience[] = [
     summary:
       "Supported business analysis and co-development of a virtual-patient simulator, from medical stakeholder requirements to patient-response configuration and answer evaluation.",
     project: "kbtg-virtual-patient",
+    logo: "/logos/experience/kbtg.png",
   },
   {
     organisation: "Airports of Thailand",
@@ -42,5 +46,6 @@ export const experience: Experience[] = [
     summary:
       "Researched airport website practices and contributed recommendations that helped make AOT’s official website branding more visible.",
     project: "aot-digital-experience",
+    logo: "/logos/experience/airports-of-thailand.png",
   },
 ];

@@ -1,7 +1,14 @@
 import Link from "next/link";
 import { experience } from "@/content/experience";
+import { InstitutionLogo } from "./institution-logo";
 
-export function ExperienceList({ compact = false }: { compact?: boolean }) {
+export function ExperienceList({
+  compact = false,
+  showLogos = false,
+}: {
+  compact?: boolean;
+  showLogos?: boolean;
+}) {
   return (
     <div className="experience-list">
       {experience.map((item) => (
@@ -11,8 +18,13 @@ export function ExperienceList({ compact = false }: { compact?: boolean }) {
             <p>{item.location}</p>
           </div>
           <div>
-            <h3>{item.organisation}</h3>
-            <p className="role">{item.role}</p>
+            <div className="experience-organisation-heading">
+              {showLogos && <InstitutionLogo src={item.logo} />}
+              <div className="experience-organisation-copy">
+                <h3>{item.organisation}</h3>
+                <p className="role">{item.role}</p>
+              </div>
+            </div>
             {!compact && <p className="mt-4 max-w-prose">{item.summary}</p>}
           </div>
           <Link

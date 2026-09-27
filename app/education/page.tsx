@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { education } from "@/content/education";
+import { InstitutionLogo } from "@/components/institution-logo";
 import { ContactCta, PageIntro } from "@/components/ui";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -30,9 +31,12 @@ export default function Education() {
                   <p className="mt-2">Earlier international experience</p>
                 )}
               </div>
-              <div>
-                <h2>{item.institution}</h2>
-                <p className="mt-3">{item.qualification}</p>
+              <div className="education-institution">
+                <InstitutionLogo src={item.logo} />
+                <div>
+                  <h2>{item.institution}</h2>
+                  <p className="mt-3">{item.qualification}</p>
+                </div>
               </div>
             </article>
           ))}

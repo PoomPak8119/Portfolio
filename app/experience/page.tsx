@@ -18,7 +18,7 @@ export default function Experience() {
       <section className="section">
         <div className="container">
           <h2 className="mb-12">Professional journey</h2>
-          <ExperienceList />
+          <ExperienceList showLogos />
         </div>
       </section>
       <ContactCta />
