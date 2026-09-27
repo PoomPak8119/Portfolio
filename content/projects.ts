@@ -105,14 +105,14 @@ export const projects: Project[] = [
   },
   {
     slug: "kmutt-edtech",
-    title: "TARA: from discovery to a classroom pilot",
+    title: "TARA: English reading from classroom need to pilot",
     organisation: "King Mongkut’s University of Technology Thonburi",
-    role: "Product team lead · Four-person team",
+    role: "Project manager",
     summary:
-      "An education technology platform developed through a 12-month journey from discovery to a student pilot.",
+      "Managed the development of TARA, a platform for digital teaching materials, varied exercises, rewards, and an AI chatbot supporting English reading for Thai students.",
     challenge:
-      "Explore how an education technology product could support student engagement.",
-    outcome: "50% increase in engagement across a 20-student pilot.",
+      "Explore a more engaging way for teachers to provide English reading materials and for students to practise beyond a traditional classroom format.",
+    outcome: "Piloted the prototype in a classroom and gathered positive feedback from the teacher and students.",
     tags: ["Education technology", "Product development", "User research"],
     featured: true,
     image: {
@@ -122,18 +122,29 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "16/9",
     },
+    ownership:
+      "I originated the idea and managed the project: forming and coordinating the team, working with a teacher collaborator, reporting to our adviser, contacting a school for testing, and preparing presentations. I also helped a little with the frontend; other team members implemented parts of the product, including the chatbot.",
+    workflowTitle: "From idea to classroom feedback",
+    workflow: [
+      {
+        title: "Shape the learning experience",
+        text: "Talk with teachers and students while developing digital teaching materials, varied exercises, and rewards students could use in a game.",
+      },
+      {
+        title: "Guide the chatbot experience",
+        text: "Suggest visual cues for difficult words to support learners who respond better to pictures; a teammate added emojis to the chatbot.",
+      },
+      {
+        title: "Pilot in class",
+        text: "Arrange a school test and ask the teacher and students for feedback at the end of the class.",
+      },
+    ],
+    tools: ["React / Vite (project stack)"],
+    methods: ["Project management", "Teacher and student conversations", "Gamification", "Classroom pilot"],
     sections: [
       {
-        title: "My role",
-        text: "I led a four-person team over 12 months, taking the education product from discovery to pilot.",
-      },
-      {
-        title: "Approach",
-        text: "The work connected discovery, product development, and a live student pilot. The pilot provided a defined setting in which to assess engagement.",
-      },
-      {
-        title: "Outcome",
-        text: "Student engagement increased by 50% across a 20-student pilot.",
+        title: "Pilot feedback",
+        text: "The teacher and students responded positively to the prototype. Some student feedback was recorded on video for the team; those recordings are not published here.",
       },
     ],
     evidence: {
@@ -143,15 +154,16 @@ export const projects: Project[] = [
   },
   {
     slug: "un-vietnam-humanitarian-automation",
-    title: "Making humanitarian data processing more efficient",
+    title: "Faster humanitarian document processing",
     organisation: "United Nations Viet Nam",
     period: "June–December 2025",
     role: "Junior Officer for Digital Transformation",
     summary:
-      "AI-assisted automation supporting humanitarian information processing in a United Nations context.",
-    challenge: "Reduce repetitive humanitarian data-processing work.",
-    outcome: "~60% estimated reduction in humanitarian data-processing time.",
-    tags: ["AI automation", "Humanitarian data", "Public sector"],
+      "Used OCR and generative AI to prepare Vietnamese storm and typhoon updates for human review, then built a separate automation pilot for the recurring workflow.",
+    challenge:
+      "During active storm response, leadership sent unstructured Vietnamese PDFs, scans, and images for English-language updates. Monitoring and reporting could recur three to nine times a day.",
+    outcome: "The assisted process took approximately two minutes, compared with more than ten minutes manually; the separate automation pilot was not deployed operationally.",
+    tags: ["AI-assisted workflow", "Automation pilot", "Humanitarian information"],
     featured: true,
     image: {
       src: "/images/projects/un-vietnam-humanitarian-automation.png",
@@ -160,18 +172,29 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "16/9",
     },
+    ownership:
+      "I developed the assisted document-preparation workflow and independently conceived and built a separate automation pilot. A Vietnamese colleague checked translations before leadership distributed the updates. I presented both approaches to the United Nations Development Coordination Office headquarters in New York.",
+    workflowTitle: "Operational support and a separate pilot",
+    workflow: [
+      {
+        title: "Prepare live updates",
+        text: "Extract text from unstructured Vietnamese documents with OCR, use generative AI to support translation, and format English-language updates.",
+      },
+      {
+        title: "Keep language review human",
+        text: "Send the draft to a Vietnamese colleague for review before leadership shares it with the UN disaster risk reduction team in Viet Nam and UN Viet Nam.",
+      },
+      {
+        title: "Prototype automation",
+        text: "Build a React file-upload interface connected to an n8n Webhook, OCR node, and local AI model to explore extraction, translation, formatting, and routing.",
+      },
+    ],
+    tools: ["OCR", "Generative AI", "React", "n8n", "Local AI"],
+    methods: ["Document processing", "AI-assisted translation", "Human review", "Workflow prototyping"],
     sections: [
       {
-        title: "My role",
-        text: "I worked on humanitarian data-processing automation as a Junior Officer for Digital Transformation with United Nations Viet Nam.",
-      },
-      {
-        title: "Approach",
-        text: "The initiative applied AI-assisted automation to repetitive information-processing work. This public summary is limited to the purpose and reported outcome; internal systems and operational data are not shown.",
-      },
-      {
-        title: "Outcome",
-        text: "The initiative produced an estimated reduction of approximately 60% in humanitarian data-processing time.",
+        title: "Pilot boundary",
+        text: "The automation remained a pilot. Its translation accuracy had not been validated sufficiently for operational use.",
       },
     ],
   },
@@ -182,11 +205,11 @@ export const projects: Project[] = [
     period: "January–June 2025",
     role: "Business Analyst and AI Engineering Intern",
     summary:
-      "A co-developed AI virtual-patient simulator using retrieval-augmented generation (RAG).",
+      "Co-developed a virtual-patient simulator using rules, prompts, and retrieval from medical reference material.",
     challenge:
-      "Explore an alternative to imported, multi-million-THB simulation hardware.",
+      "Explore a practical virtual-patient experience for clinical learning.",
     outcome:
-      "Co-developed a RAG-based virtual-patient simulator with healthcare stakeholder validation.",
+      "Co-developed patient scenarios and evaluated generated answers against reference responses, recording the results in Excel.",
     tags: ["Applied AI", "Business analysis", "Healthcare education"],
     featured: true,
     image: {
@@ -196,24 +219,26 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "16/9",
     },
-    sections: [
+    ownership:
+      "As an intern, I supported the business analyst and software engineer. I helped gather requirements from a Chulalongkorn medical professor, researched comparable products, framed the concept with Design Thinking, configured parts of the patient-response system, and evaluated its answers. The simulator was a team effort.",
+    workflowTitle: "From clinical need to evaluated responses",
+    workflow: [
       {
-        title: "My role",
-        text: "I contributed business analysis and AI engineering as an intern, co-developing the virtual-patient simulator.",
+        title: "Understand the need",
+        text: "Gather requirements with a medical professor, compare similar products, and report the findings to the team.",
       },
       {
-        title: "Approach",
-        text: "The work brought together requirements gathering, AI engineering, and healthcare stakeholder validation.",
+        title: "Shape patient scenarios",
+        text: "Configure rules, system prompts, and retrieval from JSON medical reference material, including patient personas with symptoms, gender, and age.",
       },
       {
-        title: "Solution",
-        text: "The virtual-patient simulator used retrieval-augmented generation (RAG), an approach that brings retrieved reference information into the response-generation process.",
-      },
-      {
-        title: "Outcome",
-        text: "The team co-developed a simulator as an alternative to imported, multi-million-THB hardware.",
+        title: "Evaluate answers",
+        text: "Compare generated responses with prepared reference answers and record accurate or inaccurate results in Excel.",
       },
     ],
+    tools: ["Microsoft Excel", "JSON reference material", "RAG"],
+    methods: ["Requirements gathering", "Design Thinking", "Comparable-product research", "Prompt and rule configuration", "Answer evaluation"],
+    sections: [],
   },
   {
     slug: "un-thailand-ai-intelligence",
@@ -270,7 +295,7 @@ export const projects: Project[] = [
       },
     ],
     tools: [
-      "n8n",
+      "Automation tool",
       "Gemini via OpenRouter",
       "HTTP/RSS",
       "HTML/CSS",
@@ -286,11 +311,11 @@ export const projects: Project[] = [
     sections: [
       {
         title: "Pilot and feedback",
-        text: "The digest was piloted with participating agencies, with feedback collected through Microsoft Forms to inform further iteration. My assignment concluded before the next feedback cycle was implemented.",
+        text: "The digest was piloted with participating agencies, with feedback collected through Microsoft Forms to inform further iteration.",
       },
       {
         title: "Outcome",
-        text: "The workflow reduced manual preparation for the weekly UN Country Team briefing by six hours per week.",
+        text: "The workflow reduced manual preparation for the weekly UN Country Team briefing by six hours per week, and helped leaders make more informed decisions.",
       },
     ],
   },
@@ -301,10 +326,10 @@ export const projects: Project[] = [
     period: "June–August 2024",
     role: "IT Business Analyst Intern",
     summary:
-      "Digital and website transformation recommendations in an airport organisation.",
+      "Researched airport websites and worked with AOT departments and its website supplier to recommend clearer digital presentation after a Skytrax airport audit.",
     challenge:
-      "Identify opportunities to improve the organisation’s digital and website experience.",
-    outcome: "Contributed digital and website transformation recommendations.",
+      "A Skytrax airport audit prompted AOT to examine how its official website could communicate more clearly and represent the airport brand.",
+    outcome: "My analysis contributed to removing advertising from the official website, making the airport branding more visible.",
     tags: ["Business analysis", "Digital transformation"],
     featured: false,
     image: {
@@ -314,19 +339,33 @@ export const projects: Project[] = [
       placeholderLabel: "Project image to be added",
       aspectRatio: "16/9",
     },
-    sections: [
+    ownership:
+      "As an IT Business Analyst Intern, I researched website practices, met with multiple AOT departments and the software house, explained website, frontend, backend, and CMS concepts to staff, and reported findings to the business analyst.",
+    workflowTitle: "From audit to recommendation",
+    workflow: [
       {
-        title: "My role",
-        text: "I contributed to digital and website transformation recommendations as an IT Business Analyst Intern.",
+        title: "Compare",
+        text: "Research other airports’ websites and effective website elements using web search and generative AI as research support.",
+      },
+      {
+        title: "Discuss",
+        text: "Meet with AOT departments and the website supplier to understand the existing site and possible improvements.",
+      },
+      {
+        title: "Report",
+        text: "Deliver presentation slides and a brief executive overview document to communicate the analysis.",
       },
     ],
+    tools: ["Web search", "Generative AI (research support)"],
+    methods: ["Website benchmarking", "Stakeholder meetings", "Business analysis", "Executive reporting"],
+    sections: [],
   },
 ];
 
 export const metrics = [
   {
-    value: "~60%",
-    description: "Estimated reduction in humanitarian data-processing time",
+    value: "≈2 min",
+    description: "Initial assisted document task, compared with more than ten minutes manually",
     context: "United Nations Viet Nam",
     slug: "un-vietnam-humanitarian-automation",
   },
@@ -337,8 +376,8 @@ export const metrics = [
     slug: "un-thailand-ai-intelligence",
   },
   {
-    value: "50%",
-    description: "Increase in engagement across a 20-student pilot",
+    value: "Pilot",
+    description: "Positive teacher and student feedback after a classroom test",
     context: "TARA · KMUTT",
     slug: "kmutt-edtech",
   },

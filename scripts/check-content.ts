@@ -41,16 +41,12 @@ for (const reference of [
     `Broken project reference: ${reference}`,
   );
 }
-assert.match(
-  projects.find(
-    (project) => project.slug === "un-vietnam-humanitarian-automation",
-  )!.outcome,
-  /estimated/,
-);
-assert.match(
-  projects.find((project) => project.slug === "kmutt-edtech")!.outcome,
-  /20-student pilot/,
-);
+const humanitarian = projects.find(
+  (project) => project.slug === "un-vietnam-humanitarian-automation",
+)!;
+assert.match(humanitarian.outcome, /approximately two minutes.*more than ten minutes manually/);
+assert.match(humanitarian.outcome, /pilot was not deployed operationally/);
+assert.doesNotMatch(projects.find((project) => project.slug === "kmutt-edtech")!.outcome, /50%|20-student/);
 assert.match(
   projects.find((project) => project.slug === "kbtg-virtual-patient")!.outcome,
   /Co-developed/,
@@ -76,7 +72,8 @@ const intelligenceDigest = projects.find(
   (project) => project.slug === "un-thailand-ai-intelligence",
 )!;
 assert.equal(intelligenceDigest.workflow?.length, 5);
-assert.ok(intelligenceDigest.tools?.includes("n8n"));
+assert.ok(intelligenceDigest.tools?.includes("Automation tool"));
+assert.match(intelligenceDigest.workflow!.find((step) => step.title === "Automate")!.text, /n8n/);
 assert.ok(
   intelligenceDigest.methods?.includes("Human-in-the-loop review"),
 );

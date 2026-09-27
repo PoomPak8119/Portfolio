@@ -22,7 +22,7 @@ export const experience: Experience[] = [
     location: "Viet Nam",
     period: "June–December 2025",
     summary:
-      "Translated organisational requirements into a centralised view of how UN Country Team initiatives aligned with Viet Nam’s national priorities, supporting strategic consultation and senior leadership reporting.",
+      "Supported UN–Government strategic alignment through requirements, data visualisation, and leadership reporting; also developed an assisted humanitarian document workflow and a separate automation pilot.",
     project: "un-vietnam-strategic-alignment",
   },
   {
@@ -31,7 +31,7 @@ export const experience: Experience[] = [
     location: "Thailand",
     period: "January–June 2025",
     summary:
-      "Co-development of a RAG-based AI virtual-patient simulator, connecting requirements with AI implementation.",
+      "Supported business analysis and co-development of a virtual-patient simulator, from medical stakeholder requirements to patient-response configuration and answer evaluation.",
     project: "kbtg-virtual-patient",
   },
   {
@@ -39,7 +39,8 @@ export const experience: Experience[] = [
     role: "IT Business Analyst Intern",
     location: "Thailand",
     period: "June–August 2024",
-    summary: "Digital and website transformation recommendations.",
+    summary:
+      "Researched airport website practices and contributed recommendations that helped make AOT’s official website branding more visible.",
     project: "aot-digital-experience",
   },
 ];
