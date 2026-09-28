@@ -48,7 +48,7 @@ export default function Work() {
                 <ProjectCard
                   key={project.slug}
                   project={project}
-                  number={index + 4}
+                  number={index + 5}
                 />
               ))}
           </div>

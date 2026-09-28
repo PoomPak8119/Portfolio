@@ -133,17 +133,24 @@ export default async function ProjectPage({
                 </section>
               )}
             </div>
-            <aside className="case-summary" aria-label="Project at a glance">
-              <h2>At a glance</h2>
-              <p className="font-medium text-navy">
-                {project.atAGlance ?? project.outcome}
-              </p>
-              <ul className="tags" aria-label="Project themes">
-                {project.tags.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
-            </aside>
+            {project.caseSummary && (
+              <aside
+                className="case-summary"
+                aria-label={project.caseSummary.title}
+              >
+                <h2>{project.caseSummary.title}</h2>
+                <p className="font-medium text-navy">
+                  {project.caseSummary.text}
+                </p>
+                {project.caseSummary.tags && (
+                  <ul className="tags" aria-label="Project themes">
+                    {project.caseSummary.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
+                    ))}
+                  </ul>
+                )}
+              </aside>
+            )}
           </div>
         </div>
       </section>

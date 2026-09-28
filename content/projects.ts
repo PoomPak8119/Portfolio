@@ -10,7 +10,7 @@ export type Project = {
   summary: string;
   challenge: string;
   outcome: string;
-  atAGlance?: string;
+  caseSummary?: { title: string; text: string; tags?: string[] };
   tags: string[];
   featured: boolean;
   image: PortfolioImage;
@@ -38,8 +38,6 @@ export const projects: Project[] = [
       "The UN Country Team needed fragmented initiative information structured consistently and communicated clearly for strategic consultation and leadership decision-making.",
     outcome:
       "Translated initiative-level information into leadership-ready insights for UN–Government consultation and senior UN stakeholders.",
-    atAGlance:
-      "A centralised view of UN Country Team contributions and alignment with Viet Nam’s national priorities.",
     tags: ["Strategic alignment", "Data visualisation", "Executive reporting"],
     featured: true,
     image: {
@@ -50,7 +48,7 @@ export const projects: Project[] = [
       aspectRatio: "16/9",
     },
     ownership:
-      "I was responsible for gathering and translating requirements, cleaning and standardising the Excel dataset, building the Tableau dashboard, and preparing the leadership narrative. A colleague led most of the data collection, and we co-developed the alignment and comparison logic.",
+      "I owned requirements translation, data preparation, dashboard development, and the leadership narrative. A colleague led most of the data collection, and we co-developed the alignment and comparison logic.",
     workflowTitle: "From fragmented data to leadership insight",
     workflow: [
       {
@@ -91,7 +89,7 @@ export const projects: Project[] = [
     sections: [
       {
         title: "AI as augmentation",
-        text: "Generative AI supported roadmap planning, suggested candidate patterns between initiative records and national-priority categories, and helped with occasional Tableau learning and troubleshooting. It did not independently determine the final alignment. The comparison logic was co-developed with a colleague, while I remained accountable for preparing the data, building and interpreting the dashboard, and communicating the final narrative.",
+        text: "Generative AI supported roadmap planning, suggested candidate patterns between initiative records and national-priority categories, and assisted with occasional Tableau learning and troubleshooting. Final alignment decisions remained human-led; the comparison logic was co-developed with a colleague.",
       },
       {
         title: "Deliverables",
@@ -163,6 +161,10 @@ export const projects: Project[] = [
     challenge:
       "During active storm response, leadership sent unstructured Vietnamese PDFs, scans, and images for English-language updates. Monitoring and reporting could recur three to nine times a day.",
     outcome: "The assisted process took approximately two minutes, compared with more than ten minutes manually; the separate automation pilot was not deployed operationally.",
+    caseSummary: {
+      title: "Outcome",
+      text: "The assisted process took approximately two minutes, compared with more than ten minutes manually; the separate automation pilot was not deployed operationally.",
+    },
     tags: ["AI-assisted workflow", "Automation pilot", "Humanitarian information"],
     featured: true,
     image: {
@@ -295,7 +297,7 @@ export const projects: Project[] = [
       },
     ],
     tools: [
-      "Automation tool",
+      "n8n",
       "Gemini via OpenRouter",
       "HTTP/RSS",
       "HTML/CSS",
@@ -315,7 +317,7 @@ export const projects: Project[] = [
       },
       {
         title: "Outcome",
-        text: "The workflow reduced manual preparation for the weekly UN Country Team briefing by six hours per week, and helped leaders make more informed decisions.",
+        text: "The workflow reduced manual preparation for the weekly UN Country Team briefing by six hours per week.",
       },
     ],
   },
@@ -330,6 +332,10 @@ export const projects: Project[] = [
     challenge:
       "A Skytrax airport audit prompted AOT to examine how its official website could communicate more clearly and represent the airport brand.",
     outcome: "My analysis contributed to removing advertising from the official website, making the airport branding more visible.",
+    caseSummary: {
+      title: "Outcome",
+      text: "My analysis contributed to removing advertising from the official website, making the airport branding more visible.",
+    },
     tags: ["Business analysis", "Digital transformation"],
     featured: false,
     image: {

@@ -61,7 +61,7 @@ assert.match(
   strategicAlignment.sections.find(
     (section) => section.title === "AI as augmentation",
   )!.text,
-  /did not independently determine/,
+  /Final alignment decisions remained human-led/,
 );
 assert.match(
   strategicAlignment.sections.find((section) => section.title === "Outcome")!
@@ -72,7 +72,7 @@ const intelligenceDigest = projects.find(
   (project) => project.slug === "un-thailand-ai-intelligence",
 )!;
 assert.equal(intelligenceDigest.workflow?.length, 5);
-assert.ok(intelligenceDigest.tools?.includes("Automation tool"));
+assert.ok(intelligenceDigest.tools?.includes("n8n"));
 assert.match(intelligenceDigest.workflow!.find((step) => step.title === "Automate")!.text, /n8n/);
 assert.ok(
   intelligenceDigest.methods?.includes("Human-in-the-loop review"),
