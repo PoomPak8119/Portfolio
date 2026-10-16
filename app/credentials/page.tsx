@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { credentials, recommendations } from "@/content/credentials";
 import {
@@ -62,7 +63,7 @@ export default function Credentials() {
                   {credential.href.endsWith(".pdf")
                     ? "(PDF)"
                     : "(external site)"}
-                  <span aria-hidden="true">↗</span>
+                  <ArrowIcon />
                 </a>
               </article>
             ))}
@@ -94,7 +95,7 @@ export default function Credentials() {
                     rel="noreferrer"
                   >
                     View {recommendation.title} (PDF)
-                    <span aria-hidden="true">↗</span>
+                    <ArrowIcon />
                   </a>
                 </article>
               ))}

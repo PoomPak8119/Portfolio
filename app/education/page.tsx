@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { education } from "@/content/education";
 import { InstitutionLogo } from "@/components/institution-logo";
@@ -53,7 +54,7 @@ export default function Education() {
             </p>
           </div>
           <Link className="button button-primary" href="/credentials">
-            View credentials <span aria-hidden="true">↗</span>
+            View credentials <ArrowIcon />
           </Link>
         </div>
       </section>

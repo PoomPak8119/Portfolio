@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { profile, skills } from "@/content/profile";
 import {
@@ -42,11 +43,11 @@ export default function About() {
               Viet Nam, the Czech Republic, the United States, and Ireland.
             </p>
             <Link className="text-link mt-6" href="/education">
-              View my education <span aria-hidden="true">↗</span>
+              View my education <ArrowIcon />
             </Link>
             <Link className="text-link mt-2" href="/credentials">
               View credentials &amp; recommendations{" "}
-              <span aria-hidden="true">↗</span>
+              <ArrowIcon />
             </Link>
             <div className="speaking">
               <p className="eyebrow">Sharing knowledge</p>

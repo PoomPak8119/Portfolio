@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { PortfolioImage } from "@/content/profile";
@@ -83,7 +84,7 @@ export function ContactCta() {
           </p>
         </div>
         <Link className="button button-cream" href="/contact">
-          Get in touch <span aria-hidden="true">↗</span>
+          Get in touch <ArrowIcon />
         </Link>
       </div>
     </section>

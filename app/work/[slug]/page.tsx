@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { projects } from "@/content/projects";
@@ -128,7 +129,7 @@ export default async function ProjectPage({
                   <h2>Public evidence</h2>
                   <a className="text-link" href={project.evidence.href}>
                     {project.evidence.label}
-                    <span aria-hidden="true">↗</span>
+                    <ArrowIcon />
                   </a>
                 </section>
               )}
@@ -159,7 +160,7 @@ export default async function ProjectPage({
           <p className="eyebrow">Continue reading</p>
           <h2 className="max-w-3xl">{related.title}</h2>
           <Link className="text-link mt-6" href={`/work/${related.slug}`}>
-            View next project <span aria-hidden="true">↗</span>
+            View next project <ArrowIcon />
           </Link>
         </div>
       </section>

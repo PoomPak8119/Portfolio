@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import { profile } from "@/content/profile";
 import { CvAction } from "@/components/navigation";
 import { PageIntro } from "@/components/ui";
@@ -23,14 +24,14 @@ export default function Contact() {
             <div className="contact-link">
               <p className="eyebrow">Email</p>
               <a href={`mailto:${profile.email}`}>
-                {profile.email} <span aria-hidden="true">↗</span>
+                {profile.email} <ArrowIcon />
               </a>
             </div>
             {profile.socialLinks.map((link) => (
               <div className="contact-link" key={link.label}>
                 <p className="eyebrow">Connect</p>
                 <a href={link.href}>
-                  Visit {link.label} <span aria-hidden="true">↗</span>
+                  Visit {link.label} <ArrowIcon />
                 </a>
               </div>
             ))}

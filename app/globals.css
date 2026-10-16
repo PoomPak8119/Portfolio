@@ -146,6 +146,10 @@ button,
 .section-heading h2 {
   max-width: 22ch;
 }
+.arrow-icon {
+  flex-shrink: 0;
+  vertical-align: middle;
+}
 .text-link {
   min-height: 44px;
   display: inline-flex;

@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { experience } from "@/content/experience";
 import { InstitutionLogo } from "./institution-logo";
@@ -32,7 +33,7 @@ export function ExperienceList({
             href={`/work/${item.project}`}
             aria-label={`View work at ${item.organisation}`}
           >
-            View work <span aria-hidden="true">↗</span>
+            View work <ArrowIcon />
           </Link>
         </article>
       ))}

@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import type { Project } from "@/content/projects";
 import { ImageFrame } from "./ui";
@@ -30,7 +31,7 @@ export function ProjectCard({
           aria-label={`View ${project.featured ? "case study" : "project"}: ${project.title}`}
         >
           View {project.featured ? "case study" : "project"}{" "}
-          <span aria-hidden="true">↗</span>
+          <ArrowIcon />
         </Link>
       </div>
     </article>

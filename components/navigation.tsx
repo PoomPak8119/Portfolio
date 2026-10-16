@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
@@ -22,7 +23,7 @@ export function CvAction() {
       target="_blank"
       rel="noreferrer"
     >
-      View my CV <span aria-hidden="true">↗</span>
+      View my CV <ArrowIcon />
     </a>
   ) : (
     <span

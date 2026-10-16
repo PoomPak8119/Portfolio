@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import type { Metadata } from "next";
 import Link from "next/link";
 import localFont from "next/font/local";
@@ -88,15 +89,15 @@ export default function RootLayout({
               </div>
               <nav aria-label="Contact links">
                 <a href={`mailto:${profile.email}`}>
-                  Email Passapol <span aria-hidden="true">↗</span>
+                  Email Passapol <ArrowIcon />
                 </a>
                 {profile.socialLinks.map((link) => (
                   <a key={link.label} href={link.href}>
-                    Visit {link.label} <span aria-hidden="true">↗</span>
+                    Visit {link.label} <ArrowIcon />
                   </a>
                 ))}
                 <Link href="/credentials">
-                  Credentials <span aria-hidden="true">↗</span>
+                  Credentials <ArrowIcon />
                 </Link>
                 <CvAction />
               </nav>

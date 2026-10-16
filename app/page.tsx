@@ -1,3 +1,4 @@
+import { ArrowIcon } from "@/components/arrow-icon";
 import Link from "next/link";
 import { profile, approach } from "@/content/profile";
 import { metrics, projects } from "@/content/projects";
@@ -41,10 +42,10 @@ export default function Home() {
             <p className="lead">{profile.description}</p>
             <div className="hero-actions">
               <Link className="button button-cream" href="/work">
-                View selected work <span aria-hidden="true">↗</span>
+                View selected work <ArrowIcon />
               </Link>
               <Link className="button button-dark-outline" href="/contact">
-                Get in touch <span aria-hidden="true">↗</span>
+                Get in touch <ArrowIcon />
               </Link>
             </div>
           </div>
@@ -69,7 +70,7 @@ export default function Home() {
                 </h3>
                 <Link className="text-link" href={`/work/${metric.slug}`}>
                   {metric.context}
-                  <span aria-hidden="true">↗</span>
+                  <ArrowIcon />
                 </Link>
               </article>
             ))}
@@ -83,7 +84,7 @@ export default function Home() {
             title="From a real need to a useful solution."
           >
             <Link className="text-link" href="/work">
-              View all work <span aria-hidden="true">↗</span>
+              View all work <ArrowIcon />
             </Link>
           </SectionHeading>
           <div className="project-list">
@@ -125,7 +126,7 @@ export default function Home() {
             title="Across organisations. Around real challenges."
           >
             <Link className="text-link" href="/experience">
-              View experience <span aria-hidden="true">↗</span>
+              View experience <ArrowIcon />
             </Link>
           </SectionHeading>
           <ExperienceList compact />
@@ -165,7 +166,7 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    {recognition.cta} <span aria-hidden="true">↗</span>
+                    {recognition.cta} <ArrowIcon />
                   </a>
                 </div>
               </article>
@@ -194,7 +195,7 @@ export default function Home() {
               Czech Republic, the United States, and Ireland.
             </p>
             <Link className="text-link mt-4" href="/about">
-              About my journey <span aria-hidden="true">↗</span>
+              About my journey <ArrowIcon />
             </Link>
             <div className="mt-8" id="credentials" tabIndex={-1}>
               <p className="eyebrow">Education &amp; credentials</p>
@@ -204,11 +205,11 @@ export default function Home() {
                 University College Dublin · August 2026–Present
               </p>
               <Link className="text-link mt-2" href="/education">
-                View education <span aria-hidden="true">↗</span>
+                View education <ArrowIcon />
               </Link>
               <Link className="text-link mt-2" href="/credentials">
                 View credentials &amp; recommendations{" "}
-                <span aria-hidden="true">↗</span>
+                <ArrowIcon />
               </Link>
             </div>
           </div>
