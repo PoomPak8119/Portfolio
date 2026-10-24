@@ -1,5 +1,15 @@
 # Phase 4 implementation QA
 
+## Ludaxia profile update — 24 October 2026
+
+- Added linked Home and About mentions and a seventh project overview at `/work/ludaxia`. Existing four featured studies and employment records are unchanged.
+- `npm test`, `npm run lint`, `npm run typecheck`, and `git diff --check` passed. `npx next build --webpack` successfully exported all seven project pages; the Ludaxia page and sitemap entry were verified.
+- The default `npm run build` (Turbopack) failed because its CSS worker could not bind a local port in this environment, including an escalated retry. Webpack validation required no configuration or dependency changes.
+- Chrome checked all 14 routes at 320, 375, 768, 1024, and 1440px using the production export under `/co-founder/portfolio`. Responsive, metadata, image, link, keyboard, focus, mobile dialog, reduced-motion, text zoom, no-JavaScript, 404, sitemap, robots, and social-preview checks passed. Automated axe checks passed at 375 and 1440px.
+- The temporary preview server needed HEAD routing and an explicit `/404` status correction before the complete suite passed; these were preview-server issues and required no application changes.
+- Visually reviewed Home, About, Work, and the Ludaxia overview captures, including the new overview at mobile and desktop widths. Screenshots and the browser report are under `output/playwright/`.
+- Firefox, WebKit, Lighthouse, and deployed-site checks were not repeated for this content update. No deployment was made. The results below describe the earlier baseline.
+
 Checked locally against the optimized production build at `/co-founder/portfolio`.
 
 ## Build and source checks

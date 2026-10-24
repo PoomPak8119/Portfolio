@@ -30,7 +30,7 @@ After building, use `npx serve out` when a local static-file preview is needed.
 
 ## Project structure
 
-- `app/`: home, work index, six generated project pages, experience, about, education, credentials, contact, 404, SEO routes.
+- `app/`: home, work index, seven generated project pages, experience, about, education, credentials, contact, 404, SEO routes.
 - `components/`: repeated layout, project, experience, navigation, and image patterns.
 - `content/`: typed factual content, skills, metrics, image records, contact links.
 - `lib/`: metadata and subpath-aware public asset URLs.

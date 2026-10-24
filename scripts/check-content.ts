@@ -12,6 +12,11 @@ assert.equal(
   "Project slugs must be unique",
 );
 assert.equal(projects.filter((project) => project.featured).length, 4);
+const ludaxia = projects.find((project) => project.slug === "ludaxia")!;
+assert.equal(ludaxia.role, "Co-creator · early-stage EdTech project");
+assert.match(ludaxia.outcome, /early-stage.*not yet registered as a business/);
+assert.equal(ludaxia.evidence?.href, "https://ludaxia.app/");
+assert.equal(projects.find((project) => !project.featured)?.slug, "ludaxia");
 for (const project of projects) {
   assert.match(project.slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
   assert.ok(

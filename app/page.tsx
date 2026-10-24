@@ -194,6 +194,14 @@ export default function Home() {
               building on education and work across Thailand, Viet Nam, the
               Czech Republic, the United States, and Ireland.
             </p>
+            <p>
+              I’m also co-creating Ludaxia, an early-stage EdTech project
+              exploring how AI-assisted tools can support teachers with planning
+              and teaching resources.
+            </p>
+            <Link className="text-link mt-4" href="/work/ludaxia">
+              Explore Ludaxia <ArrowIcon />
+            </Link>
             <Link className="text-link mt-4" href="/about">
               About my journey <ArrowIcon />
             </Link>

@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata(
   "About",
-  "Meet Passapol Phukhang: a Thai digital innovation professional in Dublin, connecting computer science, applied AI, and organisational transformation.",
+  "Meet Passapol Phukhang, a digital innovation professional in Dublin and co-creator of Ludaxia, an early-stage EdTech project.",
   "/about",
 );
 export default function About() {
@@ -42,7 +42,15 @@ export default function About() {
               University College Dublin. My education and work span Thailand,
               Viet Nam, the Czech Republic, the United States, and Ireland.
             </p>
-            <Link className="text-link mt-6" href="/education">
+            <p>
+              I’m also co-creating Ludaxia, an early-stage EdTech project
+              exploring how AI-assisted tools can support teachers with planning
+              and teaching resources.
+            </p>
+            <Link className="text-link mt-6" href="/work/ludaxia">
+              Explore Ludaxia <ArrowIcon />
+            </Link>
+            <Link className="text-link mt-2" href="/education">
               View my education <ArrowIcon />
             </Link>
             <Link className="text-link mt-2" href="/credentials">

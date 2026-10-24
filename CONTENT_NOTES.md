@@ -2,6 +2,8 @@
 
 ## Sources and decisions
 
+- Ludaxia was added as a non-featured project overview, with linked mentions on Home and About. The owner confirmed they are already co-creating the project; the published role is “Co-creator · early-stage EdTech project,” with future co-founder wording deferred. The owner also confirmed it is not yet registered as a business.
+- Ludaxia’s public homepage (`https://ludaxia.app/`, reviewed 24 October 2026) supports the workspace description and teacher-review requirements. Its public `/marketing/home-960.webp` product preview is stored locally as `ludaxia-teaching-workspace.webp`. Product capabilities are attributed to the site; no individual technical ownership, dates, traction, or measured educational impact are claimed. Existing featured studies, employment history, and CV are unchanged.
 - All five supplied planning documents were inspected before implementation. No application, `AGENTS.md`, CV, or actual images were present at the initial audit; the approved portrait was supplied later.
 - `DESIGN_SYSTEM.md` is the approved design specification; `DESIGN.md` points to it without duplicating tokens.
 - The Phase 4 brief requests separate pages. Featured work now includes the UN–Government strategic alignment study alongside TARA, UN Viet Nam humanitarian automation, and KBTG. UN Thailand and AOT remain concise supporting overviews.

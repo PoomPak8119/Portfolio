@@ -16,6 +16,7 @@ const routes = [
   "/work/kmutt-edtech",
   "/work/un-vietnam-humanitarian-automation",
   "/work/kbtg-virtual-patient",
+  "/work/ludaxia",
   "/work/un-thailand-ai-intelligence",
   "/work/aot-digital-experience",
 ];

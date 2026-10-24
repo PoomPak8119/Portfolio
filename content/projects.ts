@@ -243,6 +243,47 @@ export const projects: Project[] = [
     sections: [],
   },
   {
+    slug: "ludaxia",
+    title: "Ludaxia: a connected teaching workspace",
+    organisation: "Ludaxia",
+    role: "Co-Founder · early-stage EdTech project",
+    summary:
+      "I co-founded Ludaxia, an early-stage EdTech project exploring how AI-assisted tools can support teachers with planning and teaching resources.",
+    challenge:
+      "Explore how educators can discover, create, organise, and plan teaching materials in one connected workspace.",
+    outcome:
+      "An early-stage collaborative EdTech project, not yet registered as a business.",
+    caseSummary: {
+      title: "Current status",
+      text: "An early-stage collaborative EdTech project, not yet registered as a business.",
+    },
+    tags: ["Education technology", "AI-assisted teaching", "Lesson planning"],
+    featured: false,
+    image: {
+      src: "/images/projects/ludaxia-teaching-workspace.webp",
+      filename: "ludaxia-teaching-workspace.webp",
+      alt: "Ludaxia teaching workspace with lesson preparation shortcuts, unfinished plans, recent resources, and collections",
+      placeholderLabel: "Ludaxia workspace preview",
+      aspectRatio: "4/3",
+    },
+    ownership:
+      "I’m co-founding Ludaxia with the team as an early-stage EdTech project.",
+    sections: [
+      {
+        title: "The teaching workspace",
+        text: "Ludaxia’s public website presents a connected workflow: discover educator-shared resources in Explore, draft lesson plans, worksheets, and quizzes in AI Studio, arrange objectives and activities in Lesson Planner, and organise materials in My Library.",
+      },
+      {
+        title: "Teacher-led use of AI",
+        text: "AI-generated materials are drafts for teachers to review and adapt. Educators check accuracy, curriculum relevance, and classroom suitability before teaching.",
+      },
+    ],
+    evidence: {
+      label: "Visit Ludaxia’s website",
+      href: "https://ludaxia.app/",
+    },
+  },
+  {
     slug: "un-thailand-ai-intelligence",
     title: "AI-powered political intelligence digest",
     organisation: "United Nations Thailand",
