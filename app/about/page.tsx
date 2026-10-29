@@ -24,7 +24,7 @@ export default function About() {
       />
       <section className="section">
         <div className="container about-grid">
-          <ImageFrame image={profile.portrait} />
+          <ImageFrame image={profile.portrait} priority />
           <div className="prose">
             <h2>From computer science to digital transformation.</h2>
             <p>
