@@ -11,7 +11,7 @@ export const education: Education[] = [
     institution: "UCD Michael Smurfit Graduate Business School, University College Dublin",
     qualification: "Master’s Degree in Digital Innovation",
     period: "August 2026–Present",
-    country: "Dublin,Ireland",
+    country: "Dublin, Ireland",
     logo: "/logos/education/ucd-smurfit.png",
   },
   {
