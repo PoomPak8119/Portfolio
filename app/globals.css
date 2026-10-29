@@ -352,18 +352,34 @@ nav a[aria-current="page"] {
   margin-top: 32px;
 }
 .hero-portrait {
-  max-width: 360px;
+  max-width: 370px;
   width: 100%;
 }
 .hero-portrait .image-frame {
-  background: transparent;
+  /* Muted, sophisticated warm cream panel derived from --cream-200 (#f1e7b2)
+   * and balanced against --surface-100 (#f2f1eb). Creates a subtle, warm
+   * contrast behind the navy blazer without competing with the cream CTA buttons. */
+  background: #ede5c8;
   border: 0;
+  border-radius: var(--radius-md);
   color: var(--cream-200);
+  /* Editorial 5:6 aspect ratio reduces excess empty headroom above the head
+   * and gives the subject natural shoulder proportions with comfortable margins. */
+  aspect-ratio: 5 / 6 !important;
+  overflow: hidden;
+}
+.hero-portrait .image-frame img {
+  /* Gentle scale (1.06) with transform-origin anchored at upper chest (50% 35%)
+   * to position the face naturally in the upper portion while keeping natural
+   * shoulder proportions and comfortable margins inside the card. */
+  transform: scale(1.06);
+  transform-origin: 50% 35%;
 }
 .hero-caption {
-  margin-top: 16px;
+  margin-top: 12px;
   font-size: 0.875rem;
   color: var(--cream-200);
+  letter-spacing: 0.04em;
 }
 .image-frame {
   width: 100%;
